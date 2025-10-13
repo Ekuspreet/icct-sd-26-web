@@ -33,7 +33,7 @@ for (const page of pages) {
       root: path.resolve(VIEWS_DIR),
     }
   );
-  html = html.replace(/href="\/(css|js|images)\//g, 'href="./$1/');
+  html = html.replace(/href="\/([^"]*)/g, 'href="./$1');
   html = html.replace(/src="\/(css|js|images)\//g, 'src="./$1/');
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, html);
