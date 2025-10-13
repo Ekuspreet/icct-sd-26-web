@@ -1,0 +1,36 @@
+<% navlinks=[ { label: 'Home' , url: '/' }, { label: 'About' , url: '/about' }, { label: 'Call For Papers' , url: '/cfp'
+    }, { label: 'Committee' , url: '/committee' }, { label: 'Important Dates' , url: '/dates' }, { label: 'Venue' ,
+    url: '/venue' }, { label: 'Contact Us' , url: '/contact' } ]; %>
+
+
+    <div class="navbar  bg-secondary text-secondary-content ">
+        <!-- Left side: logo + title -->
+        <div class="flex flex-col md:flex-row items-center w-full md:w-auto ">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex">
+                <%- include('logo', { source: '/images/college_logo.png' }) %>
+                    <%- include('logo', { source: '/images/college_logo.png' }) %>
+            </div>
+
+            <div class=" divider md:divider-horizontal mx-4"></div>
+
+            <!-- Conference Title -->
+            <div class="text-center md:text-left text-h6 flex flex-col mt-2 md:mt-0">
+                <span>International Conference on Intelligent Computational</span>
+                <span>and Communication Technologies for Sustainable</span>
+                <span>Development (ICCT-SD 2026)</span>
+            </div>
+        </div>
+
+        <!-- Right side button -->
+        <div class="navbar-end mt-4 md:mt-0 md:flex hidden ">
+            <a class="btn  ">Call For Papers</a>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap bg-secondary justify-center gap-2 py-2 ">
+        <% for( let index=0; index < navlinks.length; index++ ) { %>
+            <%- include('navlink', { label: navlinks[index].label, url: navlinks[index].url }) %>
+                <% } %>
+
+    </div>

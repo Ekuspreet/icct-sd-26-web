@@ -1,0 +1,49 @@
+import fs from "fs";
+import path from "path";
+import ejs from "ejs";
+
+const BUILD_DIR = "dist";
+const VIEWS_DIR = "views";
+
+const pages = [
+  { name: "home", path: "index.html" },
+  { name: "about", path: "about.html" },
+];
+
+// Ensure build directory exists
+if (!fs.existsSync(BUILD_DIR)) {
+  fs.mkdirSync(BUILD_DIR, { recursive: true });
+}
+
+for (const page of pages) {
+  const src = path.join(VIEWS_DIR, "index.ejs"); // Always render index.ejs
+  const dest = path.join(BUILD_DIR, page.path);
+
+  if (!fs.existsSync(src)) {
+    console.warn(`⚠️ Source file does not exist: ${src}`);
+    continue;
+  }
+
+  // ✅ Use ejs.renderFile to preserve includes
+  var html = await ejs.renderFile(
+    src,
+    { title: page.name, page: page.name },
+    {
+      filename: src, // required for resolving relative includes
+      root: path.resolve(VIEWS_DIR),
+    }
+  );
+  html = html.replace(/href="\/(css|js|images)\//g, 'href="./$1/');
+  html = html.replace(/src="\/(css|js|images)\//g, 'src="./$1/');
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, html);
+  console.log(`✅ Built page: ${page.name} → ${page.path}`);
+}
+
+// ✅ Copy static assets from public/
+if (fs.existsSync("public")) {
+  fs.cpSync("public", BUILD_DIR, { recursive: true });
+  console.log("✅ Copied static assets from public/");
+} else {
+  console.warn("⚠️ No 'public' directory found to copy.");
+}
