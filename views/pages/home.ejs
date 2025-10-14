@@ -40,7 +40,7 @@
         description: "Punjab’s famous amusement and water park, perfect for thrill-seekers and family fun." ,
         mapLink: "https://www.google.com/maps/search/Hardy%27s+World+Ludhiana" } ] %>
 </span>
-<section class=" mt-10 ">
+<section class=" pt-10 bg-[#fafafa]">
     <div class="hero-content text-center  mx-auto px-4">
         <div class="">
             <h1 class="text-h1 font-bold text-secondary  font-montserrat">
@@ -67,7 +67,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/cfp" class="btn btn-secondary btn-lg">
+                <a href="/cfp" class="btn btn-secondary btn-md">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
@@ -75,14 +75,14 @@
                     </svg>
                     Submit Paper
                 </a>
-                <a href="#about" class="btn btn-outline btn-secondary btn-lg">
+                <a href="#about" class="btn btn-outline btn-secondary btn-md">
                     Learn More
                 </a>
             </div>
         </div>
     </div>
 </section>
-<div class="divider"></div>
+<div class="divider "></div>
 
 
 <div class=" bg-secondary/10 md:max-w-2/3 mx-auto rounded-xl my-20 ">
@@ -242,7 +242,7 @@
             <!-- Tab 1 -->
             <input type="radio" name="ludhiana_tabs" class="tab ml-4" aria-label="About Ludhiana" checked="checked" />
             <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
-                <h2 class="text-2xl font-bold text-primary">About Ludhiana</h2>
+                <h2 class="text-2xl font-bold text-secondary">About Ludhiana</h2>
                 <p class="leading-relaxed text-justify text-base-content/90">
                     Ludhiana, often called the <strong>Manchester of India</strong>, is the
                     largest city in Punjab and a major industrial hub of northern India. Known
@@ -260,7 +260,7 @@
             <!-- Tab 2 -->
             <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Gallery" />
             <div class="tab-content border-base-300 bg-base-100 p-10">
-                <h2 class="text-2xl font-bold text-primary mb-6">Gallery</h2>
+                <h2 class="text-2xl font-bold text-secondary mb-6">Gallery</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <% for( let index=0; index < ludhiana_images.length; index++ ) { %>
                         <img src="<%= ludhiana_images[index].src %>" alt="<%= ludhiana_images[index].alt %>"
@@ -273,7 +273,7 @@
             <!-- Tab 3 -->
             <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Destinations" />
             <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
-                <h2 class="text-2xl font-bold text-primary">Destinations Around Ludhiana</h2>
+                <h2 class="text-2xl font-bold text-secondary">Destinations Around Ludhiana</h2>
                 <ul class="list-disc list-inside text-base-content/90 space-y-2">
                     <% for( let index=0; index < ludhiana_places.length; index++ ) { %>
                         <li class="link link-secondary flex">
