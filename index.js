@@ -6,6 +6,8 @@ const application = express();
 
 application.set("view engine", "ejs");
 application.set("views", "./views");
+application.set("view cache", false);
+
 application.use(express.static("public"));
 
 application.use("/", webRouter);

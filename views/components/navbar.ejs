@@ -5,48 +5,51 @@
 
 
 
-    <!-- Container flex only for md and above -->
-    <div class="bg-secondary text-secondary-content p-2">
-        <!-- Container -->
-        <div class="flex justify-evenly md:hidden mt-2">
-            <span>
-                <%- include('logo', { source: '/images/college_logo.png' }) %>
-            </span>
-            <span>
-                <%- include('logo', { source: '/images/college_logo.png' }) %>
-            </span>
-        </div>
+<!-- Container flex only for md and above -->
+<div class="bg-secondary text-secondary-content md:p-4">
+  <!-- Container -->
+  <div class="flex justify-evenly md:hidden pt-2">
+    <span>
+      <%- include('logo', { source: '/images/college_logo.png' }) %>
+    </span>
+    <span>
+      <%- include('logo', { source: '/images/nitdel.png' }) %>
+    </span>
+  </div>
 
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between">
 
-            <!-- Left logo -->
-            <div class="hidden md:flex justify-start md:flex-1">
-                <%- include('logo', { source: '/images/college_logo.png' }) %>
-            </div>
-
-            <!-- Name: centered explicitly on md+ -->
-            <div class="text-center font-semibold text-h5  md:w-2/3">
-                International Conference on Intelligent Computational and Communication Technologies for Sustainable
-                Development (ICCT-SD 2026)
-            </div>
-
-            <!-- Right logo -->
-            <div class="hidden md:flex justify-end md:flex-1">
-                <%- include('logo', { source: '/images/college_logo.png' }) %>
-            </div>
-        </div>
-
-        <!-- Small screen layout adjustment: two logos top row, name bottom row -->
-
+    <!-- Left logo -->
+    <div class="hidden md:flex justify-start md:flex-1">
+      <%- include('logo', { source: '/images/college_logo.png' }) %>
     </div>
 
-
-    <div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
-
-    <div class="flex flex-wrap bg-secondary justify-center gap-2 py-2 ">
-        <% for( let index=0; index < navlinks.length; index++ ) { %>
-            <%- include('navlink', { label: navlinks[index].label, url: navlinks[index].url }) %>
-                <% } %>
-
+    <!-- Name: centered explicitly on md+ -->
+    <div class="text-center font-semibold text-h3  md:w-2/3 md:mt-0 mt-4">
+      International Conference on Intelligent Computational and Communication Technologies for Sustainable
+      Development (ICCT-SD 2026)
+      <br>
+      <span class="text-h4">
+        (1st - 3rd April 2026)
+      </span>
     </div>
-    <div class="divider bg-secondary m-0  md:hidden"></div>
+
+    <!-- Right logo -->
+    <div class="hidden md:flex justify-end md:flex-1">
+      <%- include('logo', { source: '/images/nitdel.png' }) %>
+    </div>
+  </div>
+
+  <!-- Small screen layout adjustment: two logos top row, name bottom row -->
+
+</div>
+
+
+<div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
+
+<div id="navbar" class="flex flex-wrap bg-secondary justify-center gap-2 py-2 ">
+  <% for( let index=0; index < navlinks.length; index++ ) { %>
+  <%- include('navlink', { label: navlinks[index].label, url: navlinks[index].url }) %>
+  <% } %>
+
+</div>

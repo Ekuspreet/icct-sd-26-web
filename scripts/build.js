@@ -8,6 +8,13 @@ const VIEWS_DIR = "views";
 const pages = [
   { name: "home", path: "index.html" },
   { name: "about", path: "about.html" },
+  { name: "cfp", path: "cfp.html" },
+  { name: "submission", path: "submission.html" },
+  { name: "speakers", path: "speakers.html" },
+  { name: "committees", path: "committees.html" },
+  { name: "registration", path: "registration.html" },
+  { name: "gallery", path: "gallery.html" },
+  { name: "contact", path: "contact.html" },
 ];
 
 // Ensure build directory exists
@@ -27,7 +34,7 @@ for (const page of pages) {
   // ✅ Use ejs.renderFile to preserve includes
   var html = await ejs.renderFile(
     src,
-    { title: page.name, page: page.name },
+    { title: page.name, page: page.name, static: true },
     {
       filename: src, // required for resolving relative includes
       root: path.resolve(VIEWS_DIR),

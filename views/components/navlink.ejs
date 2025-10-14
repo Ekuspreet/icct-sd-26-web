@@ -1,4 +1,7 @@
-<a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
-    href="<%= url %>">
-    <%= label %>
+<a class="btn md:btn-lg btn-sm btn-secondary  border-secondary-content/30 hover:border-secondary-content/60" id="<%= label.toLowerCase().replace(/\s+/g, '-') %>" href="<%= url %><% if (static) { %>
+<% if (url !== "/") { %>
+.html
+<% } %>
+<% } %>">
+  <%= label %>
 </a>

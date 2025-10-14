@@ -28,7 +28,7 @@
     <footer class="footer flex flex-col footer-center bg-secondary text-secondary-content p-6 mt-auto">
         <div class="flex items-center justify-center ">
             <%- include('components/logo', { source: '/images/college_logo.png' }) %>
-                <%- include('components/logo', { source: '/images/college_logo.png' }) %>
+                <%- include('components/logo', { source: '/images/nitdel.png' }) %>
         </div>
         <div>
             <p class="font-bold text-h5 font-montserrat">
@@ -41,7 +41,26 @@
             </p>
         </div>
     </footer>
+    <script>
 
+        const nav_id_map = {
+            "": "home",
+            "about": "about-us",
+            "cfp": "call-for-papers",
+            "submission": "submission",
+            "speakers": "invited-speakers",
+            "committees": "committees",
+            "registration": "registration",
+            "gallery": "gallery",
+            "contact": "contact-us"
+        }
+        const current_path = window.location.pathname.split('/')[1] || '';
+        const nav_element = document.getElementById(nav_id_map[current_path]);
+        if (nav_element) {
+            console.log(nav_id_map[current_path])
+            nav_element.classList.add('border-white');
+        }
+    </script>
 </body>
 
 </html>
