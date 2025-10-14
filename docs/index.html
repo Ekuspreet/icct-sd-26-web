@@ -13,72 +13,98 @@
 
 <body>
     <div>
-        <div class="">
-
-
-</div>
-    </div>
-    <div>
         
 
 
-    <div class="navbar  bg-secondary text-secondary-content ">
-        <!-- Left side: logo + title -->
-        <div class="flex flex-col md:flex-row items-center w-full md:w-auto ">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex">
+
+    <!-- Container flex only for md and above -->
+    <div class="bg-secondary text-secondary-content p-2">
+        <!-- Container -->
+        <div class="flex justify-evenly md:hidden mt-2">
+            <span>
                 <img src="./images/college_logo.png" alt="" class="h-28 object-contain" />
-                    <img src="./images/college_logo.png" alt="" class="h-28 object-contain" />
+            </span>
+            <span>
+                <img src="./images/college_logo.png" alt="" class="h-28 object-contain" />
+            </span>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+
+            <!-- Left logo -->
+            <div class="hidden md:flex justify-start md:flex-1">
+                <img src="./images/college_logo.png" alt="" class="h-28 object-contain" />
             </div>
 
-            <div class=" divider md:divider-horizontal mx-4"></div>
+            <!-- Name: centered explicitly on md+ -->
+            <div class="text-center font-semibold text-h5  md:w-2/3">
+                International Conference on Intelligent Computational and Communication Technologies for Sustainable
+                Development (ICCT-SD 2026)
+            </div>
 
-            <!-- Conference Title -->
-            <div class="text-center md:text-left text-h6 flex flex-col mt-2 md:mt-0">
-                <span>International Conference on Intelligent Computational</span>
-                <span>and Communication Technologies for Sustainable</span>
-                <span>Development (ICCT-SD 2026)</span>
+            <!-- Right logo -->
+            <div class="hidden md:flex justify-end md:flex-1">
+                <img src="./images/college_logo.png" alt="" class="h-28 object-contain" />
             </div>
         </div>
 
-        <!-- Right side button -->
-        <div class="navbar-end mt-4 md:mt-0 md:flex hidden ">
-            <a class="btn  ">Call For Papers</a>
-        </div>
+        <!-- Small screen layout adjustment: two logos top row, name bottom row -->
+
     </div>
+
+
+    <div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
 
     <div class="flex flex-wrap bg-secondary justify-center gap-2 py-2 ">
         
-            <a class="btn btn-md btn-secondary   " href="./">
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./">
     Home
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./about">
-    About
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./about">
+    About Us
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./cfp">
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./cfp">
     Call For Papers
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./committee">
-    Committee
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./submission">
+    Submission
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./dates">
-    Important Dates
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./speakers">
+    Invited Speakers
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./venue">
-    Venue
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./committees">
+    Committees
 </a>
                 
-            <a class="btn btn-md btn-secondary   " href="./contact">
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./registration">
+    Registration
+</a>
+                
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./gallery">
+    Gallery
+</a>
+                
+            <a class="btn md:btn-md btn-xs btn-secondary  border-secondary-content/30 hover:border-secondary-content/60"
+    href="./contact">
     Contact Us
 </a>
                 
 
     </div>
+    <div class="divider bg-secondary m-0  md:hidden"></div>
     </div>
     <div>
 
@@ -103,52 +129,43 @@
 
     <div>
         <!-- Hero Section -->
-<section class="hero min-h-screen bg-gradient-to-br from-base-100 to-base-200 relative overflow-hidden">
-    <div class="hero-content text-center max-w-6xl mx-auto px-4">
-        <div class="max-w-4xl">
-            <h1 class="text-h1 font-bold text-primary mb-6 font-montserrat">
-                International Conference on Intelligent Computational and Communication Technologies for Sustainable
-                Development
+<span>
+    
+</span>
+<span>
+    
+</span>
+<span>
+    
+</span>
+<section class=" mt-10 ">
+    <div class="hero-content text-center  mx-auto px-4">
+        <div class="">
+            <h1 class="text-h1 font-bold text-secondary  font-montserrat">
+                <span class="bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent">
+                    Compute.
+                </span>
+                <span class="bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent">
+                    Communicate.
+                </span>
+                <span class="bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent">
+                    Conserve.
+                </span>
             </h1>
-            <p class="text-h4 text-accent mb-4 font-quicksand font-semibold">
-                ICCT-SD 2026
-            </p>
-            <p class="text-body text-base-content/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join leading researchers, academics, and industry professionals to explore cutting-edge advancements in
-                computational intelligence, communication technologies, and sustainable development solutions for a
+
+            <div class="badge badge-secondary font-semibold mb-10">Hybrid Mode (Offline + Online)</div>
+            <p class="text-body text-base-content/80 mb-8 max-w-3xl mx-auto leading-relaxed font-semibold">
+                Join leading researchers, academics, and industry professionals to explore cutting-edge
+                advancements
+                in
+                computational intelligence, communication technologies, and sustainable development
+                solutions
+                for a
                 better tomorrow.
             </p>
 
-            <!-- Key Info Cards -->
-            <div class="grid md:grid-cols-3 gap-6 mb-10">
-                <div class="card bg-primary/10 border border-primary/20">
-                    <div class="card-body text-center p-6">
-                        <div class="text-primary text-2xl mb-2">📅</div>
-                        <h3 class="card-title text-h6 justify-center text-primary">Conference Dates</h3>
-                        <p class="text-small text-base-content/70">March 15-17, 2026</p>
-                    </div>
-                </div>
-
-                <div class="card bg-secondary/10 border border-secondary/20">
-                    <div class="card-body text-center p-6">
-                        <div class="text-secondary text-2xl mb-2">📍</div>
-                        <h3 class="card-title text-h6 justify-center text-secondary">Venue</h3>
-                        <p class="text-small text-base-content/70">ICCT College Campus</p>
-                    </div>
-                </div>
-
-                <div class="card bg-accent/10 border border-accent/20">
-                    <div class="card-body text-center p-6">
-                        <div class="text-accent text-2xl mb-2">📝</div>
-                        <h3 class="card-title text-h6 justify-center text-accent">Paper Submission</h3>
-                        <p class="text-small text-base-content/70">Deadline: Jan 15, 2026</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="./cfp" class="btn btn-primary btn-lg">
+                <a href="./cfp" class="btn btn-secondary btn-lg">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
@@ -162,59 +179,154 @@
             </div>
         </div>
     </div>
-
-    <!-- Decorative Elements -->
 </section>
+<div class="divider"></div>
+
+
+<div class=" bg-secondary/10 md:max-w-2/3 mx-auto rounded-xl my-20 ">
+    <h3 class="text-h2 font-semibold text-secondary font-montserrat py-6 text-center">Important Dates</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-3">
+        <!-- Timeline Item 1 -->
+        
+            <div class="timeline-item  p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg">
+                <div class="text-center">
+                    <time class="font-montserrat text-body font-medium">
+                        2026-04-01 to 2026-04-03
+                    </time>
+                    <div class="text-h6 font-black text-secondary">
+                        International Conference Date
+                    </div>
+                    <button class="btn btn-secondary btn-outline btn-sm mt-4"
+                        onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=International+Conference+Date&amp;dates=20260401/20260403&amp;details=Attend+the+ICCT-SD+2026+Conference&amp;sf=true&amp;output=xml')">Add
+                        To Calendar</button>
+                </div>
+            </div>
+            
+            <div class="timeline-item  p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg">
+                <div class="text-center">
+                    <time class="font-montserrat text-body font-medium">
+                        2025-12-15
+                    </time>
+                    <div class="text-h6 font-black text-secondary">
+                        Submission of Full Paper
+                    </div>
+                    <button class="btn btn-secondary btn-outline btn-sm mt-4"
+                        onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Submission+of+Full+Paper&amp;dates=20251215&amp;details=Submit+your+full+paper+for+ICCT-SD+2026&amp;sf=true&amp;output=xml')">Add
+                        To Calendar</button>
+                </div>
+            </div>
+            
+            <div class="timeline-item  p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg">
+                <div class="text-center">
+                    <time class="font-montserrat text-body font-medium">
+                        2026-01-05
+                    </time>
+                    <div class="text-h6 font-black text-secondary">
+                        Acceptance Notification
+                    </div>
+                    <button class="btn btn-secondary btn-outline btn-sm mt-4"
+                        onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Acceptance+Notification&amp;dates=20260105&amp;details=Check+notification+of+acceptance+for+ICCT-SD+2026&amp;sf=true&amp;output=xml')">Add
+                        To Calendar</button>
+                </div>
+            </div>
+            
+            <div class="timeline-item  p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg">
+                <div class="text-center">
+                    <time class="font-montserrat text-body font-medium">
+                        2026-01-25
+                    </time>
+                    <div class="text-h6 font-black text-secondary">
+                        Camera Ready Paper
+                    </div>
+                    <button class="btn btn-secondary btn-outline btn-sm mt-4"
+                        onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Camera+Ready+Paper&amp;dates=20260125&amp;details=Submit+camera+ready+paper+for+ICCT-SD+2026&amp;sf=true&amp;output=xml')">Add
+                        To Calendar</button>
+                </div>
+            </div>
+            
+    </div>
+</div>
+<div class="divider"></div>
 
 <!-- About Section -->
-<section id="about" class="py-20 bg-base-100">
+<section id="about" class="bg-base-100 my-20">
     <div class="container mx-auto px-4 max-w-6xl">
         <div class="text-center mb-16">
-            <h2 class="text-h2 font-bold text-primary mb-4 font-montserrat">About ICCT-SD 2026</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
-            <p class="text-body text-base-content/80 max-w-3xl mx-auto">
-                Bridging the gap between technological innovation and sustainable development through collaborative
-                research and knowledge sharing.
+            <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">About ICCT-SD 2026</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
+            </div>
+            <p class="text-body text-base-content/80 max-w-3xl mx-auto ">
+            <p class=" text-justify">
+
+                The International Conference on Intelligent Computational and Communication Technologies for
+                Sustainable Development (ICCT-SD 2026) serves as a premier platform for researchers,
+                academicians,
+                industry experts, and policymakers to share insights and innovations at the intersection of
+                intelligent computation, advanced communication systems, and sustainable development. The
+                conference
+                emphasizes how emerging technologies such as Artificial Intelligence (AI), Machine Learning
+                (ML),
+                the Internet of Things (IoT), and Big Data Analytics can drive progress toward achieving the
+                United
+                Nations’ Sustainable Development Goals (SDGs).
+            </p>
+            <br>
+            <p class=" text-justify">
+
+                Through discussions, research presentations, and case studies, ICCT-SD 2026 aims to explore
+                the
+                transformative role of technology in addressing global challenges related to health,
+                society,
+                environment, and industry. By fostering collaboration among academia, industry, and
+                government
+                sectors, the conference seeks to catalyze sustainable technological advancements that
+                contribute
+                to
+                a more inclusive, resilient, and sustainable future.
+            </p>
             </p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-                <h3 class="text-h3 font-semibold text-secondary mb-6 font-montserrat">Conference Vision</h3>
-                <p class="text-body text-base-content/80 mb-6 leading-relaxed">
-                    ICCT-SD 2026 aims to create a platform where researchers, academicians, and industry experts
-                    converge to discuss the latest developments in computational intelligence and communication
-                    technologies that contribute to sustainable development goals.
-                </p>
-                <p class="text-body text-base-content/80 mb-6 leading-relaxed">
-                    Our conference focuses on fostering innovation that addresses real-world challenges while promoting
-                    environmental sustainability and social responsibility.
-                </p>
-
-                <div class="stats stats-vertical lg:stats-horizontal shadow-lg bg-base-200">
-                    <div class="stat">
-                        <div class="stat-title text-small">Expected Participants</div>
-                        <div class="stat-value text-primary text-h4">500+</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-title text-small">Research Papers</div>
-                        <div class="stat-value text-secondary text-h4">150+</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-title text-small">Countries</div>
-                        <div class="stat-value text-accent text-h4">25+</div>
-                    </div>
-                </div>
+                <h3 class="text-h3 font-semibold text-secondary mb-6 font-montserrat">Objectives</h3>
+                <ul class="list-disc pl-6 text-body text-base-content/80 mb-6 leading-relaxed space-y-3">
+                    <li>
+                        To promote interdisciplinary research integrating intelligent computational and
+                        communication technologies with sustainability-driven applications.
+                    </li>
+                    <li>
+                        To provide a global forum for sharing innovative ideas, research outcomes, and
+                        practical
+                        implementations supporting the United Nations’ SDGs.
+                    </li>
+                    <li>
+                        To facilitate collaboration among researchers, professionals, and policymakers for
+                        addressing real-world challenges in health, environment, and social well-being
+                        through
+                        technology.
+                    </li>
+                    <li>
+                        To encourage the development of smart systems, secure networks, and data-driven
+                        solutions
+                        that contribute to sustainable industrial and societal growth.
+                    </li>
+                    <li>
+                        To inspire innovation and partnerships that translate emerging technologies into
+                        actionable
+                        strategies for global sustainable development.
+                    </li>
+                </ul>
             </div>
 
             <div class="grid grid-cols-1 gap-6">
-                <div class="card bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
+                <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20">
                     <div class="card-body">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-primary text-xl">🤖</span>
+                            <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-secondary text-xl">🤖</span>
                             </div>
-                            <h4 class="card-title text-h5 text-primary">AI & Machine Learning</h4>
+                            <h4 class="card-title text-h5 text-secondary">AI & Machine Learning</h4>
                         </div>
                         <p class="text-small text-base-content/70">
                             Exploring intelligent systems and algorithms for sustainable solutions.
@@ -236,13 +348,13 @@
                     </div>
                 </div>
 
-                <div class="card bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
+                <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20">
                     <div class="card-body">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-accent text-xl">🌍</span>
+                            <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-secondary text-xl">🌍</span>
                             </div>
-                            <h4 class="card-title text-h5 text-accent">Sustainability</h4>
+                            <h4 class="card-title text-h5 text-secondary">Sustainability</h4>
                         </div>
                         <p class="text-small text-base-content/70">
                             Green computing and eco-friendly technological innovations.
@@ -253,20 +365,7 @@
         </div>
 
         <!-- Key Topics -->
-        <div class="bg-gradient-to-r from-base-200 to-base-300 rounded-2xl p-8">
-            <h3 class="text-h3 font-semibold text-center text-primary mb-8 font-montserrat">Key Research Areas</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="badge badge-primary badge-lg p-4 text-primary-content">Internet of Things (IoT)</div>
-                <div class="badge badge-secondary badge-lg p-4 text-secondary-content">Blockchain Technology</div>
-                <div class="badge badge-accent badge-lg p-4 text-accent-content">Smart Grid Systems</div>
-                <div class="badge badge-primary badge-lg p-4 text-primary-content">Cloud Computing</div>
-                <div class="badge badge-secondary badge-lg p-4 text-secondary-content">Cybersecurity</div>
-                <div class="badge badge-accent badge-lg p-4 text-accent-content">Renewable Energy Tech</div>
-                <div class="badge badge-primary badge-lg p-4 text-primary-content">Edge Computing</div>
-                <div class="badge badge-secondary badge-lg p-4 text-secondary-content">5G/6G Networks</div>
-                <div class="badge badge-accent badge-lg p-4 text-accent-content">Green Computing</div>
-            </div>
-        </div>
+
     </div>
 </section>
 
@@ -274,214 +373,119 @@
 <section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
     <div class="container mx-auto px-4 max-w-6xl">
         <div class="text-center mb-16">
-            <h2 class="text-h2 font-bold text-primary mb-4 font-montserrat">Important Links</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
-            <p class="text-body text-base-content/80 max-w-2xl mx-auto">
-                Quick access to essential conference information and resources.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Call for Papers -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-primary mb-2">Call for Papers</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Submit your research papers and contribute to the advancement of sustainable technologies.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./cfp" class="btn btn-primary btn-sm">Submit Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Committee -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-secondary/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-secondary mb-2">Committee</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Meet our distinguished organizing and technical committee members.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./committee" class="btn btn-secondary btn-sm">View Committee</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Important Dates -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-accent/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-accent mb-2">Important Dates</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Key deadlines and milestones for conference participation.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./dates" class="btn btn-accent btn-sm">View Dates</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Venue -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                            </path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-primary mb-2">Venue & Travel</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Conference location, accommodation, and travel information.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./venue" class="btn btn-primary btn-sm">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Registration -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-secondary/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-secondary mb-2">Registration</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Register for the conference and secure your participation.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./register" class="btn btn-secondary btn-sm">Register Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact -->
-            <div
-                class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-accent/10">
-                <div class="card-body text-center">
-                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title text-h5 justify-center text-accent mb-2">Contact Us</h3>
-                    <p class="text-small text-base-content/70 mb-4">
-                        Get in touch with our organizing team for any inquiries.
-                    </p>
-                    <div class="card-actions justify-center">
-                        <a href="./contact" class="btn btn-accent btn-sm">Contact</a>
-                    </div>
-                </div>
+            <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">The City, Ludhiana.</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
             </div>
         </div>
-
-        <!-- Quick Stats -->
-        <div class="mt-16 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl p-8">
-            <div class="text-center mb-8">
-                <h3 class="text-h3 font-semibold text-primary font-montserrat">Conference Timeline</h3>
+        <!-- name of each tab group should be unique -->
+        <div class="tabs tabs-border w-full">
+            <!-- Tab 1 -->
+            <input type="radio" name="ludhiana_tabs" class="tab ml-4" aria-label="About Ludhiana" checked="checked" />
+            <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
+                <h2 class="text-2xl font-bold text-primary">About Ludhiana</h2>
+                <p class="leading-relaxed text-justify text-base-content/90">
+                    Ludhiana, often called the <strong>Manchester of India</strong>, is the
+                    largest city in Punjab and a major industrial hub of northern India. Known
+                    for its vibrant textile industry, hosiery exports, and entrepreneurial
+                    spirit, Ludhiana blends tradition with progress. Beyond its economic
+                    prowess, the city is rich in Punjabi culture — from lively folk dances and
+                    sumptuous cuisine to warm hospitality. The Sutlej River runs along its
+                    northern edge, offering a serene contrast to the city’s bustling life.
+                    Whether you’re walking through old bazaars, exploring Gurudwaras, or
+                    enjoying a glass of lassi at a roadside dhaba, Ludhiana promises an
+                    experience full of heart and energy.
+                </p>
             </div>
-            <div class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                <div class="timeline-item">
-                    <div class="timeline-middle">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="h-5 w-5 text-primary">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.25 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="timeline-start md:text-end mb-10">
-                        <time class="font-mono italic text-small">Dec 1, 2025</time>
-                        <div class="text-h6 font-black text-primary">Paper Submission Opens</div>
-                        <div class="text-small">Start preparing your research submissions</div>
-                    </div>
-                    <hr class="bg-primary" />
+
+            <!-- Tab 2 -->
+            <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Gallery" />
+            <div class="tab-content border-base-300 bg-base-100 p-10">
+                <h2 class="text-2xl font-bold text-primary mb-6">Gallery</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2F5e1f9431585181.5657226f60b6d.jpg" alt="Gurudwara Dukh Niwaran Sahib"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Ludhiana_clock_tower.jpg" alt="Ludhiana Clock Tower"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Punjab_Agricultural_University_Ludhiana.jpg" alt="Punjab Agricultural University"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Ludhiana_Market.jpg" alt="Chaura Bazaar"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Sutlej_bridge_Ludhiana.jpg" alt="Sutlej Bridge"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ludhiana_City_Aerial_View.jpg" alt="Aerial View of Ludhiana"
+                            class="rounded-2xl shadow-md object-fill h-48 w-full" />
+                        
+
                 </div>
-                <div class="timeline-item">
-                    <hr class="bg-primary" />
-                    <div class="timeline-middle">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="h-5 w-5 text-secondary">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.25 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="timeline-end mb-10">
-                        <time class="font-mono italic text-small">Jan 15, 2026</time>
-                        <div class="text-h6 font-black text-secondary">Submission Deadline</div>
-                        <div class="text-small">Final date for paper submissions</div>
-                    </div>
-                    <hr class="bg-secondary" />
-                </div>
-                <div class="timeline-item">
-                    <hr class="bg-secondary" />
-                    <div class="timeline-middle">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="h-5 w-5 text-accent">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.25 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="timeline-start md:text-end mb-10">
-                        <time class="font-mono italic text-small">Feb 28, 2026</time>
-                        <div class="text-h6 font-black text-accent">Notification of Acceptance</div>
-                        <div class="text-small">Authors will be notified about paper status</div>
-                    </div>
-                    <hr class="bg-accent" />
-                </div>
-                <div class="timeline-item">
-                    <hr class="bg-accent" />
-                    <div class="timeline-middle">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="h-5 w-5 text-primary">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.25 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="timeline-end mb-10">
-                        <time class="font-mono italic text-small">Mar 15-17, 2026</time>
-                        <div class="text-h6 font-black text-primary">Conference Days</div>
-                        <div class="text-small">Three days of presentations and networking</div>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Tab 3 -->
+            <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Destinations" />
+            <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
+                <h2 class="text-2xl font-bold text-primary">Destinations Around Ludhiana</h2>
+                <ul class="list-disc list-inside text-base-content/90 space-y-2">
+                    
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.waze.com/live-map/directions/in/pb/ludhiana/gurudwara-sri-dukh-niwaran-sahib?to=place.ChIJYWFG7fCDGjkRJdOPUkSP-sU">
+                                <strong>
+                                    Gurudwara Dukh Niwaran Sahib
+                                </strong> – A sacred Sikh shrine known for its peaceful atmosphere and historical importance.
+                            </a>
+                        </li>
+                        
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.mappls.com/direction-from--to-ludhiana%2Bpunjab%2Bagricultural%2Buniversity%2C%2Bludhiana?%40zdata=ZnJvbSsrdG8rNzUuODA3MTM2LDMwLjkwMjI2LEhaUDlaQSt2aWE%3D">
+                                <strong>
+                                    Punjab Agricultural University Museum
+                                </strong> – A glimpse into Punjab’s rural heritage, traditional crafts, and agricultural evolution.
+                            </a>
+                        </li>
+                        
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.google.com/maps/search/Nehru+Rose+Garden+Ludhiana">
+                                <strong>
+                                    Nehru Rose Garden
+                                </strong> – A sprawling urban park home to over 1,600 varieties of roses, ideal for picnics and evening strolls.
+                            </a>
+                        </li>
+                        
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.google.com/maps/search/Phillaur+Fort+Punjab">
+                                <strong>
+                                    Phillaur Fort
+                                </strong> – A historical fort built by Maharaja Ranjit Singh, showcasing Sikh military architecture and British influences.
+                            </a>
+                        </li>
+                        
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.google.com/maps/search/Rakh+Bagh+Park+Ludhiana">
+                                <strong>
+                                    Rakh Bagh Park
+                                </strong> – A beloved recreational spot featuring lush greenery, a toy train, and spaces for families to unwind.
+                            </a>
+                        </li>
+                        
+                        <li class="link link-secondary flex">
+
+                            <a href="https://www.google.com/maps/search/Hardy%27s+World+Ludhiana">
+                                <strong>
+                                    Hardy’s World
+                                </strong> – Punjab’s famous amusement and water park, perfect for thrill-seekers and family fun.
+                            </a>
+                        </li>
+                        
+                </ul>
             </div>
         </div>
     </div>
