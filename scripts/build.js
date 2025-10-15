@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import ejs from "ejs";
 
-const BUILD_DIR = "docs";
+const BUILD_DIR = "icct-sd-26-web-static";
 const VIEWS_DIR = "views";
 
 const pages = [

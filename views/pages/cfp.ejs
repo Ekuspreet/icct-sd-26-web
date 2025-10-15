@@ -33,122 +33,119 @@
     [ "AI-Powered Precision Farming and Yield Prediction" , "Smart Pest and Disease Detection using Deep Learning"
     , "Machine Learning for Intelligent Irrigation Management" , "AI-Driven Agricultural Supply Chain Optimisation"
     , "Smart Intelligent Organic Farming" ] } ]; %>
-    <!-- Conference Tracks Section -->
+<!-- Conference Tracks Section -->
 
-    <section class="pt-10 bg-base-100">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <div class="text-center ">
-                <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Scope</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-                </div>
-                <p class="text-xl text-justify text-base-content/80  mx-auto">
-                    The International Conference on Intelligent Computational and Communication Technologies for
-                    Sustainable Development (ICCT-SD 2026) focuses on integrating intelligent computational methods and
-                    advanced communication technologies to address global sustainability challenges. It provides a
-                    platform for researchers, academicians, industry professionals, and policymakers to exchange
-                    knowledge and present innovations that support the UN Sustainable Development Goals (SDGs). The
-                    scope covers Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart
-                    Systems, Big Data Analytics and Cloud Computing, Next-Generation Networks, Security and Privacy, and
-                    other emerging technologies. Emphasis is placed on sustainable solutions for sectors such as
-                    healthcare, agriculture, urban development, manufacturing, and climate resilience. The conference
-                    aims to foster collaboration, promote technological innovation, and translate research into
-                    practical applications, contributing to a more sustainable and equitable future through
-                    interdisciplinary engagement and knowledge dissemination.
+<section class="pt-10 bg-base-100">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center ">
+      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Scope</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
+      </div>
+      <p class="text-body text-justify text-base-content/80  mx-auto">
+        The International Conference on Intelligent Computational and Communication Technologies for
+        Sustainable Development (ICCT-SD 2026) focuses on integrating intelligent computational methods and
+        advanced communication technologies to address global sustainability challenges. It provides a
+        platform for researchers, academicians, industry professionals, and policymakers to exchange
+        knowledge and present innovations that support the UN Sustainable Development Goals (SDGs). The
+        scope covers Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart
+        Systems, Big Data Analytics and Cloud Computing, Next-Generation Networks, Security and Privacy, and
+        other emerging technologies. Emphasis is placed on sustainable solutions for sectors such as
+        healthcare, agriculture, urban development, manufacturing, and climate resilience. The conference
+        aims to foster collaboration, promote technological innovation, and translate research into
+        practical applications, contributing to a more sustainable and equitable future through
+        interdisciplinary engagement and knowledge dissemination.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Manuscript Submission and Detailed View Section -->
+<section class="py-10 mt-10 bg-gradient-to-br from-secondary/10 to-secondary/5">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Manuscript Submission Link -->
+      <div class="card bg-white border border-secondary/20 shadow-lg">
+        <div class="card-body p-8 text-center">
+
+          <h3 class="text-h3 font-bold text-secondary mb-4 font-montserrat">
+            Manuscript Submission Link
+          </h3>
+          <p class="text-body text-base-content/80 mb-6">
+            Submit your research papers through our online submission portal.
+          </p>
+          <div class="bg-base-200 rounded-lg p-4 border-l-4 border-secondary/30">
+            <p class="text-sm text-base-content/70 font-medium">
+              (Updated soon)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed View -->
+      <div class="card bg-white border border-secondary/20 shadow-lg">
+        <div class="card-body p-8 text-center">
+          <h3 class="text-h3 font-bold text-secondary mb-4 font-montserrat">
+            Detailed View
+          </h3>
+          <p class="text-body text-base-content/80 mb-6">
+            Access comprehensive guidelines and conference details.
+          </p>
+          <div class="bg-base-200 rounded-lg p-4 border-l-4 border-secondary/30">
+            <p class="text-sm text-base-content/70 font-medium">
+              (Updated soon)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-16">
+      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Conference Tracks</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
+      </div>
+      <p class="text-body text-base-content/80 max-w-3xl mx-auto">
+        Explore our six comprehensive tracks, each featuring a range of topics including but not limited to
+        those listed below. Submissions on related or emerging subjects are also welcome.
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <% for(let i=0; i < tracks.length; i++) { %>
+      <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="card-body p-6">
+          <!-- Track Header -->
+          <div class="flex items-center mb-6 h-24">
+            <div class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-secondary text-2xl">
+                <%= tracks[i].emoji %>
+              </span>
+            </div>
+            <div class="flex-1 flex flex-col justify-start">
+              <h3 class="card-title text-h5 text-secondary font-montserrat font-bold leading-tight mb-2">
+                <%= tracks[i].track %>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Topics List -->
+          <div class="space-y-3">
+
+            <div class="grid gap-3">
+              <% for(let j=0; j < tracks[i].topics.length; j++) { %>
+              <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
+                <p class="text-sm text-base-content/90 leading-relaxed">
+                  <%= tracks[i].topics[j] %>
                 </p>
+              </div>
+              <% } %>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Manuscript Submission and Detailed View Section -->
-    <section class="py-10 mt-10 bg-gradient-to-br from-secondary/10 to-secondary/5">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Manuscript Submission Link -->
-                <div class="card bg-white border border-secondary/20 shadow-lg">
-                    <div class="card-body p-8 text-center">
-
-                        <h3 class="text-h3 font-bold text-secondary mb-4 font-montserrat">
-                            Manuscript Submission Link
-                        </h3>
-                        <p class="text-body text-base-content/80 mb-6">
-                            Submit your research papers through our online submission portal.
-                        </p>
-                        <div class="bg-base-200 rounded-lg p-4 border-l-4 border-secondary/30">
-                            <p class="text-sm text-base-content/70 font-medium">
-                                (Updated soon)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Detailed View -->
-                <div class="card bg-white border border-secondary/20 shadow-lg">
-                    <div class="card-body p-8 text-center">
-                        <h3 class="text-h3 font-bold text-secondary mb-4 font-montserrat">
-                            Detailed View
-                        </h3>
-                        <p class="text-body text-base-content/80 mb-6">
-                            Access comprehensive guidelines and conference details.
-                        </p>
-                        <div class="bg-base-200 rounded-lg p-4 border-l-4 border-secondary/30">
-                            <p class="text-sm text-base-content/70 font-medium">
-                                (Updated soon)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-base-100">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <div class="text-center mb-16">
-                <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Conference Tracks</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-                </div>
-                <p class="text-body text-base-content/80 max-w-3xl mx-auto">
-                    Explore our six comprehensive tracks, each featuring a range of topics including but not limited to
-                    those listed below. Submissions on related or emerging subjects are also welcome.
-                </p>
-            </div>
-            <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                <% for(let i=0; i < tracks.length; i++) { %>
-                    <div
-                        class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="card-body p-6">
-                            <!-- Track Header -->
-                            <div class="flex items-center mb-6 h-24">
-                                <div
-                                    class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                    <span class="text-secondary text-2xl">
-                                        <%= tracks[i].emoji %>
-                                    </span>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-start">
-                                    <h3
-                                        class="card-title text-h5 text-secondary font-montserrat font-bold leading-tight mb-2">
-                                        <%= tracks[i].track %>
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <!-- Topics List -->
-                            <div class="space-y-3">
-
-                                <div class="grid gap-3">
-                                    <% for(let j=0; j < tracks[i].topics.length; j++) { %>
-                                        <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
-                                            <p class="text-sm text-base-content/90 leading-relaxed">
-                                                <%= tracks[i].topics[j] %>
-                                            </p>
-                                        </div>
-                                        <% } %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <% } %>
-            </div>
-        </div>
-    </section>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>

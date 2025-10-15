@@ -65,12 +65,14 @@ dates = [
         , "By providing a platform for knowledge exchange and networking, the conference aims to inspire actionable insights and partnerships that contribute to the global agenda of sustainable development. The ICCT-SD seeks to catalyze technological innovations that align with the SDGs, ensuring that technological advancements benefit society at large and contribute to a more equitable, sustainable future. This conference is focused on the advanced technologies like Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart Systems, Big Data Analytics and Cloud Computing, Next-Generation Network and Communication Technologies, Security and Privacy, and other Contemporary Technologies and their contribution in the various United Nations' Sustainable Development Goals."
         ] %>
 
-  <% objectives=[ "To promote interdisciplinary research integrating intelligent computational and communication technologies with sustainability-driven applications."
-            , "To provide a global forum for sharing innovative ideas, research outcomes, and practical implementations supporting the United Nations' SDGs."
-            , "To facilitate collaboration among researchers, professionals, and policymakers for addressing real-world challenges in health, environment, and social well-being through technology."
-            , "To encourage the development of smart systems, secure networks, and data-driven solutions that contribute to sustainable industrial and societal growth."
-            , "To inspire innovation and partnerships that translate emerging technologies into actionable strategies for global sustainable development."
-            ] %>
+  <% objectives = [
+  "Promote interdisciplinary research and innovation for sustainable development.",
+  "Provide a global platform to share research and best practices aligned with UN SDGs.",
+  "Foster academia–industry–policy collaborations on key challenges.",
+  "Encourage sustainable digital ecosystems and scalable solutions.",
+  "Inspire strategies and partnerships for real-world impact."
+] %>
+
 </span>
 <section class=" pt-12 bg-[#fafafa]">
   <div class="hero-content text-center  mx-auto px-4">
@@ -86,7 +88,7 @@ dates = [
       <h3 class="text-h3 font-semibold text-secondary font-montserrat">
         National Institute of Technology (NIT), Delhi
       </h3>
-      <div class="bg-secondary rounded-full text-secondary-content text-xl font-semibold p-1 px-3 mx-auto mt-8 max-w-fit">
+      <div class="bg-secondary rounded-full text-secondary-content text-h5 font-semibold p-1 px-3 mx-auto mt-8 max-w-fit">
         Conference will be conducted in hybrid mode.
       </div>
     </div>
@@ -177,8 +179,8 @@ dates = [
       <!-- Tab 1 -->
       <input type="radio" name="ludhiana_tabs" class="tab ml-4" aria-label="About Ludhiana" checked="checked" />
       <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
-        <h2 class="text-2xl font-bold text-secondary">About Ludhiana</h2>
-        <p class="leading-relaxed text-justify text-base-content/90">
+        <h2 class="text-h5 font-bold text-secondary">About Ludhiana</h2>
+        <p class="leading-relaxed text-justify text-base-content/90 text-body">
           Ludhiana, often called the <strong>Manchester of India</strong>, is the
           largest city in Punjab and a major industrial hub of northern India. Known
           for its vibrant textile industry, hosiery exports, and entrepreneurial
@@ -195,10 +197,10 @@ dates = [
       <!-- Tab 2 -->
       <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Gallery" />
       <div class="tab-content border-base-300 bg-base-100 p-10">
-        <h2 class="text-2xl font-bold text-secondary mb-6">Gallery</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <h2 class="text-h5 font-bold text-secondary mb-6">Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <% for( let index=0; index < ludhiana_images.length; index++ ) { %>
-          <img src="<%= ludhiana_images[index].src %>" alt="<%= ludhiana_images[index].alt %>" class="rounded-2xl shadow-md object-fill h-48 w-full" />
+          <img src="<%= ludhiana_images[index].src %>" alt="<%= ludhiana_images[index].alt %>" class="rounded-2xl shadow-md object-cover object-top h-48 w-full" />
           <% } %>
 
         </div>
@@ -206,7 +208,7 @@ dates = [
 
       <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Destinations" />
       <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
-        <h2 class="text-2xl font-bold text-secondary">Destinations Around Ludhiana</h2>
+        <h2 class="text-h5 font-bold text-secondary">Destinations Around Ludhiana</h2>
         <ul class="list-disc list-inside text-base-content/90 space-y-2">
           <% for( let index=0; index < ludhiana_places.length; index++ ) { %>
           <li class="link link-secondary flex">

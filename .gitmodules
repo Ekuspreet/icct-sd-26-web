@@ -1,0 +1,3 @@
+[submodule "icct-sd-26-web-static"]
+	path = icct-sd-26-web-static
+	url = https://github.com/Ekuspreet/icct-sd-26-web-static.git

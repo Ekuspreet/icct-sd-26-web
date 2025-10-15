@@ -1,0 +1,61 @@
+<% 
+committee = [
+{
+    designation : "Principal, Guru Nanak Dev Engineering College, Ludhiana",
+    title : "Chief Patron",
+    name : "Prof. (Dr.) Sehijpal Singh"
+},
+{
+    designation : "Director, National Institute of Technology Delhi",
+    title : "Patron",
+    name : "Prof. (Dr.) Ajay Kumar Sharma"
+},
+{
+    designation : "Professor and Head, Department of Computer Science & Engineering, GNDEC",
+    title : "Chairperson",
+    name : "Prof. (Dr.) Kiran Jyoti"
+},
+{
+    designation : "Associate Professor, Department of Computer Science & Engineering, GNDEC",
+    title : "Convenor",
+    name : "Dr. Vivek Thapar"
+},
+{
+    designation : "Assistant Professor, Department of Computer Science & Engineering, GNDEC",
+    title : "Organising Secretary",
+    name : "Dr. Sita Rani"
+},
+{
+    designation : "Assistant Professor, Department of Computer Science & Engineering, GNDEC",
+    title : "Organising Secretary",
+    name : "Dr. Priyanka Arora"
+}
+
+]
+%>
+
+<section>
+  <div class="text-center mt-10">
+    <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Committee</h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
+    </div>
+
+    <p class="text-body text-base-content/80 max-w-3xl mx-auto">
+      The ICCT-SD 2026 conference is guided by a distinguished committee of experts and academicians dedicated to fostering
+      interdisciplinary engagement and knowledge dissemination.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="mt-6 mb-10 px-2 max-w-2/4 mx-auto">
+      <ol class="text-left text-body">
+        <% for( let index = 0; index < committee.length; index++ ) { %>
+        <li>
+          <strong class="text-secondary"><%= committee[index].title %> : </strong>
+          <b><%= committee[index].name %>,</b> <%= committee[index].designation %>
+        </li>
+        <% } %>
+      </ol>
+
+    </div>
+</section>
