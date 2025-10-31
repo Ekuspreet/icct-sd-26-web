@@ -37,6 +37,32 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
   %>
 </span>
 
+<span>
+
+  <% 
+  about_cse = ["Department of Computer Science and Engineering was established in year 1997. Department is offering B.Tech. and M.Tech. programs in Computer Science and Engineering. Laboratories of the department are equipped with state of the art infrastructure to cater course work and research activities. A Good number of books is available in departmental library for prompt access to students and faculty members. Under academic autonomy, study schemes of the offered programs are updated regularly focusing outcome based education, to make students employable as per national and international requirements. Graduates of the department are serving around the globe in eminent companies, academic, as well as in public sector. They are bringing laurel to the department by excelling in fields of their work. Every year a good number of students are clearing different competitive exams."]
+  %>
+</span>
+
+
+<span>
+
+  <%
+    cse_vision = "To generate competent professionals to become part of the industry and research organizations at the national and international levels."
+  %>
+</span>
+
+<span>
+  <% 
+  cse_mission = [
+    "Providing a strong theoretical and practical background across the computer science discipline with an emphasis on software development.",
+    "Imparting the skills necessary to continue education to grow professional.",
+    "Empowering the youth in rural communities with computer education.",
+    "Inculcating professional behavior, strong ethical values, innovative research capabilities and leadership abilities."
+]
+
+  %>
+</span>
 
 <!-- about_institutions.ejs -->
 <!-- Guru Nanak Dev Engineering College Section -->
@@ -44,7 +70,7 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-12">
       <h2 class="text-h2  text-secondary font-montserrat font-bold">Guru Nanak Dev Engineering College (GNDEC), Ludhiana</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mt-4 rounded-full"></div>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto  rounded-full"></div>
     </div>
 
     <% for (let i = 0; i < about_college.length; i++) { %>
@@ -54,7 +80,7 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
     <% } %>
 
     <div class="mt-10">
-      <h3 class="text-h3  text-secondary font-montserrat mb-4">Vision</h3>
+      <h3 class="text-h3  text-secondary font-montserrat font-semibold mb-4">Vision</h3>
       <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30">
         <p class="text-body text-base-content/90 leading-relaxed">
           <%= vision %>
@@ -63,7 +89,7 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
     </div>
 
     <div class="mt-10">
-      <h3 class="text-h3  text-secondary font-montserrat mb-4">Mission</h3>
+      <h3 class="text-h3  text-secondary font-montserrat font-semibold mb-4">Mission</h3>
       <div class="grid gap-3">
         <% for (let i = 0; i < mission.length; i++) { %>
         <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
@@ -79,12 +105,51 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
 
 <div class="divider"></div>
 
+<section class="bg-base-100 py-16">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-12">
+      <h2 class="text-h2  text-secondary font-montserrat font-bold">Department of Computer Science and Engineering, GNDEC</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto  rounded-full"></div>
+    </div>
+
+    <% for (let i = 0; i < about_cse.length; i++) { %>
+    <p class="text-justify mb-6 text-base-content/90 text-body">
+      <%= about_cse[i] %>
+    </p>
+    <% } %>
+
+    <div class="mt-10">
+      <h3 class="text-h3  text-secondary font-montserrat font-semibold mb-4">Vision</h3>
+      <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30">
+        <p class="text-body text-base-content/90 leading-relaxed">
+          <%= cse_vision %>
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <h3 class="text-h3  text-secondary font-montserrat font-semibold mb-4">Mission</h3>
+      <div class="grid gap-3">
+        <% for (let i = 0; i < cse_mission.length; i++) { %>
+        <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
+          <p class="text-body  text-base-content/90">
+            <%= cse_mission[i] %>
+          </p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider"></div>
 <!-- National Institute of Technology Delhi Section -->
 <section class="bg-base-100 py-16">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-12">
       <h2 class="text-h2  text-secondary font-montserrat font-bold">National Institute of Technology (NIT), Delhi</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mt-4 rounded-full"></div>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto  rounded-full"></div>
     </div>
 
     <% for (let i = 0; i < about_nitd.length; i++) { %>
@@ -94,7 +159,7 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
     <% } %>
 
     <div class="mt-10">
-      <h3 class="text-h3  text-secondary font-montserrat mb-4">Vision</h3>
+      <h3 class="text-h3  text-secondary font-montserrat font-semibold mb-4">Vision</h3>
       <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30">
         <p class="text-body text-base-content/90 leading-relaxed ">
           <%= vision_nitd %>
@@ -103,7 +168,7 @@ mission_nitd="Application of Knowledge through learning and inculcating Research
     </div>
 
     <div class="mt-10">
-      <h3 class="text-h3  text-secondary font-montserrat mb-4">Mission</h3>
+      <h3 class="text-h3  text-secondary font-semibold font-montserrat mb-4">Mission</h3>
       <div class="grid gap-3">
 
         <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">

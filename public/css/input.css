@@ -58,6 +58,30 @@
   --font-quicksand : "Quicksand", sans-serif;
 }
 
+@layer utilities {
+  @keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes gradient-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-gradient-spin {
+    display: inline-block;      /* needed for transform */
+    background: conic-gradient(from 0deg, #6b7280, #9ca3af, #d1d5db, #6b7280); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-spin 6s linear infinite;
+  }
+  .animate-gradient-rotate {
+    background-size: 200% 200%;
+    animation: gradient-rotate 4s linear infinite;
+  }
+}
+
 html {
   font-family: "Quicksand", sans-serif;
 }

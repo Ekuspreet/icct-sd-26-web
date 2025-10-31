@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ICCT-SD 26 | <%= title %>
+  </title>
+  <link rel="stylesheet" href="/css/output.css">
+
+</head>
+
+<body>
+
+  <div>
+    <!-- Container flex only for md and above -->
+    <div class="bg-secondary text-secondary-content md:p-4">
+      <!-- Container -->
+      <div class="flex justify-evenly md:hidden pt-2">
+        <span>
+          <img src="./images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+        </span>
+        <span>
+          <img src="./images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+        </span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+
+        <!-- Left logo -->
+        <div class="hidden md:flex justify-start md:flex-1">
+          <img src="../images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+        </div>
+
+        <!-- Name: centered explicitly on md+ -->
+        <div class="text-center font-semibold text-h3  md:w-2/3 md:mt-0 mt-4 leading-tight">
+          International Conference on Intelligent Computational and Communication Technologies for Sustainable
+          Development (ICCT-SD 2026)
+          <br>
+          <span class="text-h5 font-montserrat">
+            (1<sup>st</sup> –3<sup>rd</sup> April, 2026)
+          </span>
+
+          <div class="text-h6 mt-1">
+            To be conducted in hybrid mode.
+          </div>
+        </div>
+
+        <!-- Right logo -->
+        <div class="hidden md:flex justify-end md:flex-1">
+          <img src="../images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+        </div>
+      </div>
+
+      <!-- Small screen layout adjustment: two logos top row, name bottom row -->
+
+    </div>
+    <div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
+
+  </div>
+  <div>
+
+    <div class="wave-header relative bg-secondary ">
+      <svg class="waves absolute bottom-0 left-0 w-full h-12 md:h-20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fafafa" />
+        </g>
+
+      </svg>
+
+    </div>
+  </div>
+
+
+  <!-- Quick Links Section -->
+  <section class="py-20 bg-base-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Conference Template Format</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <a href="../conference/LaTeX2e+Proceedings+Templates+download.zip" class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="card-body p-8 text-center">
+            <h3 class="text-h4 font-bold text-secondary font-montserrat mb-2">
+              Latex Format
+            </h3>
+
+          </div>
+        </a>
+
+        <a href="../conference/Microsoft+Word+Proceedings+Templates.zip" class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="card-body p-8 text-center">
+            <h3 class="text-h4 font-bold text-secondary font-montserrat mb-2">
+              Microsoft Word Format
+            </h3>
+
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer flex flex-col footer-center bg-gradient-to-br from-secondary to-secondary/70 text-secondary-content p-6 mt-auto">
+    <div class="flex items-center justify-center ">
+      <img src="/images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+      <img src="/images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+
+    </div>
+    <div>
+
+      <h3 class="text-h2 font-black  font-montserrat">
+        ICCT-SD 2026
+      </h3>
+      <h5 class="text-h6   mt-2">organised by</h5>
+      <h3 class="text-h4 font-semibold  font-montserrat">
+        Department of Computer Science and Engineering, GNDEC, Ludhiana
+      </h3>
+      <h5 class="text-h6   mt-2">in collaboration with</h5>
+      <h3 class="text-h4 font-semibold  font-montserrat">
+        Department of Computer Science and Engineering, NIT, Delhi
+      </h3>
+      <p class="text-body opacity-90 mt-2 mb-6">© Copyright <%= new Date().getFullYear() %>, GNDEC, NITD . All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,3 +1,145 @@
-<div class="text-secondary font-bold text-center py-20 font-montserrat text-h1">
-  🚧 Site Under Construction
-</div>
+<% 
+// Submission Content
+submission_content = [
+  "ICCT-SD-26 invites researchers, practitioners, and students worldwide to submit previously unpublished original papers for consideration for presentation at the conference in English."
+];
+ %>
+<% 
+ // Submission Guidelines
+ submission_guidelines = [
+ "Peer review will be applied to every submission.",
+ "Providing a uniform format for papers that appear in the conference proceedings is the aim of the conference template.",
+ "The conference templates include instructions on how to write and format conference papers.",
+ "It is required that authors utilize the conference manuscript templates listed below.",
+ "All submissions made by ICCT-SD-2026 will undergo a plagiarism check.",
+ "Submissions that have a similarity score of 30% or higher will be rejected before they can be sent for review.",
+ "Please make sure that before submitting your conference paper to the conference, all guidance text has been eliminated."
+];
+
+%>
+<% 
+// Submission Declaration
+submission_declaration = "Submitting an article signifies that the work presented has not been previously published (except as an abstract, a published lecture, or an academic thesis), is not currently under review by any other publication, has been approved for submission by all authors and, where applicable, by the relevant institutional authorities, and that, upon acceptance, it will not be published elsewhere in the same form, in English or any other language, whether in print or electronic format, without the written consent of the copyright holder. To ensure adherence to these conditions, the article may be subject to verification using originality or duplication detection software.";
+%>
+
+<!-- Hero Section -->
+<section class="pt-20 bg-[#fafafa]">
+  <div class="hero-content text-center mx-auto px-4">
+    <div class="">
+      <h1 class="text-h1 font-bold text-secondary font-montserrat mb-6">
+        <span class="bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent">
+          Paper Submission
+        </span>
+      </h1>
+
+      <p class="text-body text-base-content/80 mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
+        <%= submission_content[0] %>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- Submission Guidelines Section -->
+<section class="py-20 ">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Submission Guidelines</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+
+    </div>
+
+    <div class="grid gap-4 max-w-4xl mx-auto">
+      <% for(let i = 0; i < submission_guidelines.length; i++) { %>
+      <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30 shadow-sm flex  items-center ">
+        <span class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+          <span class="text-secondary font-bold text-sm"><%= i + 1 %></span>
+        </span>
+        <p class="text-body font-medium text-base-content/90 leading-relaxed flex-1 ">
+          <%= submission_guidelines[i] %>
+        </p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Declaration Section -->
+<section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Author Declaration</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+    </div>
+
+    <div class="card bg-white border border-secondary/20 shadow-xl max-w-5xl mx-auto">
+      <div class="card-body p-8">
+        <div class="flex items-start mb-6">
+
+          <div>
+            <h3 class="font-bold text-secondary text-h4 mb-4 font-montserrat">
+              Terms of Submission
+            </h3>
+            <p class="text-body text-base-content/90 leading-relaxed text-justify">
+              <%= submission_declaration %>
+            </p>
+          </div>
+        </div>
+        <div class="alert bg-secondary text-white mt-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-sm font-semibold">Please read the declaration carefully. All submissions will be verified for originality and duplication.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Submission Portal Section -->
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
+      <div class="card-body p-8 text-center">
+        <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
+          Ready to Submit?
+        </h2>
+        <p class="text-body text-base-content/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal. <span class="font-semibold">The Microsoft Conference Management Toolkit (CMT) service was utilized to manage the peer-review process for this conference. The service was provided free of charge by Microsoft, which covered all associated expenses, including those related to Azure cloud services, software development, and technical support. The Link for submission is <a href="https://cmt3.research.microsoft.com/ICCTSD2026" class="link">https://cmt3.research.microsoft.com/ICCTSD2026</a> </span>
+        </p>
+
+        <!-- QR Code Section -->
+        <div class="mb-8">
+          <div class="bg-white p-6 rounded-lg inline-block shadow-md border border-secondary/20">
+            <img src="/images/submission_qr.png" alt="Submission QR Code" class="aspect-square max-h-80 mx-auto mb-3">
+            <p class="text-sm text-base-content/70 font-semibold">Scan to Submit</p>
+          </div>
+        </div>
+        <a href="https://cmt3.research.microsoft.com/ICCTSD2026">
+          <button class="btn btn-secondary btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            Submit Your Paper
+          </button>
+        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/conference">
+            <button class="btn btn-outline btn-secondary btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Template
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
