@@ -60,6 +60,15 @@ dates = [
 </span>
 
 <span>
+  <% 
+    technical_partners = [
+      { src: "/images/cmt.png", alt: "CMT" },
+      { src: "/images/csi.png", alt: "CSI" }
+    ];
+  %>
+</span>
+
+<span>
   <% about=[ "The International Conference on Intelligent Computational and Communication Technologies for Sustainable Development (ICCT-SD 2026) aims to bring together researchers, academicians, industry professionals, and policymakers to explore how emerging technologies can drive progress toward achieving the United Nations' Sustainable Development Goals (SDGs). The conference focuses on the intersection of intelligent computational methods, advanced communication technologies, and sustainable development, fostering collaboration and innovation in these critical areas."
         , "The primary objective is to address global challenges related to physical and mental health, societal needs, conductive environment, and technological innovations in various fields by leveraging cutting-edge technologies like artificial intelligence, machine learning, Internet of Things (IoT), and big data analytics. Participants will discuss and present research findings, case studies, and best practices that demonstrate how these technologies can be applied to create sustainable solutions."
         , "By providing a platform for knowledge exchange and networking, the conference aims to inspire actionable insights and partnerships that contribute to the global agenda of sustainable development. The ICCT-SD seeks to catalyze technological innovations that align with the SDGs, ensuring that technological advancements benefit society at large and contribute to a more equitable, sustainable future. This conference is focused on the advanced technologies like Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart Systems, Big Data Analytics and Cloud Computing, Next-Generation Network and Communication Technologies, Security and Privacy, and other Contemporary Technologies and their contribution in the various United Nations' Sustainable Development Goals."
@@ -123,61 +132,79 @@ dates = [
   </div>
 </section>
 <div class="divider "></div>
-<div class="  md:max-w-2/4 mx-auto rounded-xl py-10 ">
-  <h3 class="text-h2 font-semibold text-secondary font-montserrat  text-center">Proceedings</h3>
-  <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
 
-  <div class="flex justify-center md:flex-row flex-col gap-4 ">
-    <% for( let i=0; i < proceedings.length; ++i ) { %>
-    <div class="timeline-item aspect-square h-40 rounded-full border-2 overflow-hidden border-base-300 bg-white  ">
-      <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
-      <h6 class="text-caption text-center"> *Applied</h6>
+<div class="flex md:flex-row flex-col justify-center items-center  ">
+
+  <!-- Proceedings -->
+  <div class="  md:max-w-2/4 mx-auto rounded-xl py-10 flex-1 ">
+    <%- include('../components/section_title.ejs', {
+      text: 'Proceedings'
+    }) %>
+    <div class="flex justify-center md:flex-row flex-col gap-4 ">
+      <% for( let i=0; i < proceedings.length; ++i ) { %>
+      <div class="timeline-item aspect-square h-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white  ">
+        <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
+        <h6 class="text-caption text-center"> *Applied</h6>
+      </div>
+      <% } %>
     </div>
-    <% } %>
+  </div>
+  <!-- Technical Partners -->
+  <div class="divider md:divider-horizontal"></div>
+
+  <div class="  md:max-w-2/4 mx-auto rounded-xl py-10 flex-1 ">
+    <%- include('../components/section_title.ejs', {
+      text: 'Technical Partners'
+    }) %>
+    <div class="flex justify-center md:flex-row flex-col gap-4 ">
+      <% for( let i=0; i < technical_partners.length; ++i ) { %>
+      <div class="timeline-item aspect-square h-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white ">
+        <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="mx-auto object-contain  w-auto  aspect-square" />
+      </div>
+      <% } %>
+    </div>
+    <p class=" text-sm px-3 relative py-3 ">*The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
   </div>
 </div>
-
 <div class="divider"></div>
 
 <!-- About Section -->
 <section id="about" class="bg-base-100 my-10">
   <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
-      <h2 class="text-h2 font-bold text-secondary font-montserrat">About ICCT-SD 2026</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-      </div>
-      <p class="text-body text-base-content/80md:max-w-2/3 mx-auto ">
-        <% for( let index=0; index < about.length; index++ ) { %>
-      <p class="text-justify mt-4">
-        <%= about[index] %>
-      </p>
-      <% } %>
-      </>
+      <%- include('../components/section_title', { text: 'About ICCT-SD 2026' }) %>
+      <p class="text-justify text-body">
 
-      <div class="gap-12 items-center my-16">
-        <div>
-          <h3 class="text-h3 font-semibold text-secondary mb-6 font-montserrat">Objectives</h3>
-          <div class="grid gap-3">
-            <% for(let i=0; i < objectives.length; i++) { %>
-            <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
-              <p class="text-body font-semibold text-base-content/90 leading-relaxed">
-                <%= objectives[i] %>
-              </p>
-            </div>
-            <% } %>
-          </div>
+        The International Conference on Intelligent Computational and Communication Technologies for Sustainable Development (ICCT-SD 2026) aims to bring together researchers, academicians, industry professionals, and policymakers to explore how emerging technologies can drive progress toward achieving the United Nations' Sustainable Development Goals (SDGs). The conference focuses on the intersection of intelligent computational methods, advanced communication technologies, and sustainable development, fostering collaboration and innovation in these critical areas.
+        <br>
+        The primary objective is to address global challenges related to physical and mental health, societal needs, conductive environment, and technological innovations in various fields by leveraging cutting-edge technologies like artificial intelligence, machine learning, Internet of Things (IoT), and big data analytics. Participants will discuss and present research findings, case studies, and best practices that demonstrate how these technologies can be applied to create sustainable solutions.
+        <br>
+        By providing a platform for knowledge exchange and networking, the conference aims to inspire actionable insights and partnerships that contribute to the global agenda of sustainable development. The ICCT-SD seeks to catalyze technological innovations that align with the SDGs, ensuring that technological advancements benefit society at large and contribute to a more equitable, sustainable future. This conference is focused on the advanced technologies like Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart Systems, Big Data Analytics and Cloud Computing, Next-Generation Network and Communication Technologies, Security and Privacy, and other Contemporary Technologies and their contribution in the various United Nations' Sustainable Development Goals.
+
+      </p>
+    </div>
+    <div class="gap-12 items-center my-16">
+
+      <h3 class="text-h3 font-semibold text-secondary mb-6 font-montserrat text-center">Objectives</h3>
+      <div class="grid gap-3">
+        <% for(let i=0; i < objectives.length; i++) { %>
+        <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
+          <p class="text-body font-semibold text-base-content/90 leading-relaxed">
+            <%= objectives[i] %>
+          </p>
         </div>
+        <% } %>
       </div>
     </div>
+  </div>
+  </div>
 </section>
 
 <!-- Important Links Section -->
 <section class="py-10 bg-gradient-to-br from-base-200 to-base-100">
   <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-6">
-      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">The City, Ludhiana.</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-      </div>
+      <%- include('../components/section_title', { text: 'The City, Ludhiana.' }) %>
     </div>
     <!-- name of each tab group should be unique -->
     <div class="tabs tabs-xs md:tabs-md tabs-border w-full">

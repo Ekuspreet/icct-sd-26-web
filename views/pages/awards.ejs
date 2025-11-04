@@ -38,11 +38,7 @@ awards = [
 <section class="pt-20 bg-[#fafafa]">
   <div class="hero-content text-center mx-auto px-4">
     <div>
-      <h2 class="text-h2 font-bold text-secondary font-montserrat">Awards & Recognition</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
-      <p class="text-body text-base-content/80 mb-8md:max-w-2/3 mx-auto leading-relaxed font-semibold">
-        ICCT-SD 2026 recognizes excellence in research and presentation through various award categories. Outstanding contributions to the field of intelligent computational and communication technologies will be honored.
-      </p>
+      <%- include('../components/section_title', { text: 'Awards & Recognition' }) %>
     </div>
   </div>
 </section>
@@ -68,7 +64,7 @@ awards = [
           <!-- Criteria List -->
           <div class="space-y-3">
             <h4 class="font-semibold text-secondary text-body uppercase tracking-wide mb-4">Eligibility:</h4>
-            <div class="grid gap-3">
+            <div class="flex flex-col gap-3">
               <% for(let j = 0; j < awards[i].criteria.length; j++) { %>
               <div class="p-3 bg-white/80 rounded-lg border-l-4 <%= awards[i].borderColor %>">
                 <div class="flex items-start">
@@ -77,7 +73,7 @@ awards = [
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
                   </span>
-                  <p class="text-body text-base-content/90 leading-relaxed">
+                  <p class="text-body text-base-content/90 leading-relaxed text-left">
                     <%= awards[i].criteria[j] %>
                   </p>
                 </div>
@@ -95,10 +91,10 @@ awards = [
       <h3 class="text-h3 font-bold text-secondary font-montserrat mb-4">
         Think your paper deserves an award?
       </h3>
-      <p class="text-body text-base-content/80 mb-8md:max-w-2/3 mx-auto leading-relaxed">
+      <p class="text-body text-base-content/80 mb-8 md:max-w-2/3 mx-auto leading-relaxed">
         Make sure your paper is presented at the conference and meets the eligibility criteria to be considered for one of our prestigious awards.
       </p>
-      <a href="/submission" class="btn btn-secondary btn-lg">
+      <a href="/submission" class="btn btn-secondary btn-lg ">
         Submit Your Paper
       </a>
     </div>

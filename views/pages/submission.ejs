@@ -12,7 +12,7 @@ submission_content = [
  "The conference templates include instructions on how to write and format conference papers.",
  "It is required that authors utilize the conference manuscript templates listed below.",
  "All submissions made by ICCT-SD-2026 will undergo a plagiarism check by by Turnitin/ iThenticate.",
- "Submissions that have a similarity score of 25% or higher will be rejected before they can be sent for review.",
+ "Submissions that have a similarity score of 20% or higher will be rejected before they can be sent for review.",
  "Please make sure that before submitting your conference paper to the conference, all guidance text has been eliminated."
 ];
 
@@ -25,9 +25,8 @@ submission_declaration = "Submitting an article signifies that the work presente
 <!-- Hero Section -->
 <section class="pt-20 bg-[#fafafa]">
   <div class="hero-content text-center mx-auto px-4">
-    <div class="">
-      <%- include('../components/section_title', { title: 'Paper Submission', level: 'h1', subtitle: submission_content[0] }) %>
-    </div>
+    <%- include('../components/section_title', { text: 'Paper Submission' }) %>
+  </div>
   </div>
 </section>
 
@@ -43,7 +42,7 @@ submission_declaration = "Submitting an article signifies that the work presente
 
     </div>
 
-    <div class="grid gap-4md:max-w-2/3 mx-auto">
+    <div class="grid gap-4  mx-auto">
       <% for(let i = 0; i < submission_guidelines.length; i++) { %>
       <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30 shadow-sm flex  items-center ">
         <span class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
@@ -75,7 +74,7 @@ submission_declaration = "Submitting an article signifies that the work presente
             <h3 class="font-bold text-secondary text-h4 mb-4 font-montserrat">
               Terms of Submission
             </h3>
-            <p class="text-body text-base-content/90 leading-relaxed text-justify">
+            <p class="text-body text-base-content/90 leading-relaxed text-justify ">
               <%= submission_declaration %>
             </p>
           </div>
