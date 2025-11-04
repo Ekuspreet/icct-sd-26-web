@@ -11,8 +11,8 @@ submission_content = [
  "Providing a uniform format for papers that appear in the conference proceedings is the aim of the conference template.",
  "The conference templates include instructions on how to write and format conference papers.",
  "It is required that authors utilize the conference manuscript templates listed below.",
- "All submissions made by ICCT-SD-2026 will undergo a plagiarism check.",
- "Submissions that have a similarity score of 30% or higher will be rejected before they can be sent for review.",
+ "All submissions made by ICCT-SD-2026 will undergo a plagiarism check by by Turnitin/ iThenticate.",
+ "Submissions that have a similarity score of 25% or higher will be rejected before they can be sent for review.",
  "Please make sure that before submitting your conference paper to the conference, all guidance text has been eliminated."
 ];
 
@@ -26,15 +26,7 @@ submission_declaration = "Submitting an article signifies that the work presente
 <section class="pt-20 bg-[#fafafa]">
   <div class="hero-content text-center mx-auto px-4">
     <div class="">
-      <h1 class="text-h1 font-bold text-secondary font-montserrat mb-6">
-        <span class="bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent">
-          Paper Submission
-        </span>
-      </h1>
-
-      <p class="text-body text-base-content/80 mb-8 max-w-4xl mx-auto leading-relaxed font-semibold">
-        <%= submission_content[0] %>
-      </p>
+      <%- include('../components/section_title', { title: 'Paper Submission', level: 'h1', subtitle: submission_content[0] }) %>
     </div>
   </div>
 </section>
@@ -44,14 +36,14 @@ submission_declaration = "Submitting an article signifies that the work presente
 
 <!-- Submission Guidelines Section -->
 <section class="py-20 ">
-  <div class="container mx-auto px-4 max-w-6xl">
+  <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
       <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Submission Guidelines</h2>
       <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
 
     </div>
 
-    <div class="grid gap-4 max-w-4xl mx-auto">
+    <div class="grid gap-4md:max-w-2/3 mx-auto">
       <% for(let i = 0; i < submission_guidelines.length; i++) { %>
       <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30 shadow-sm flex  items-center ">
         <span class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
@@ -66,17 +58,16 @@ submission_declaration = "Submitting an article signifies that the work presente
   </div>
 </section>
 
-<div class="divider"></div>
 
 <!-- Declaration Section -->
 <section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
-  <div class="container mx-auto px-4 max-w-6xl">
+  <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
       <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Author Declaration</h2>
       <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
     </div>
 
-    <div class="card bg-white border border-secondary/20 shadow-xl max-w-5xl mx-auto">
+    <div class="card bg-white border border-secondary/20 shadow-xlmd:max-w-2/3 mx-auto">
       <div class="card-body p-8">
         <div class="flex items-start mb-6">
 
@@ -100,24 +91,22 @@ submission_declaration = "Submitting an article signifies that the work presente
   </div>
 </section>
 
-<div class="divider"></div>
 
 <!-- Submission Portal Section -->
 <section class="py-20 bg-base-100">
-  <div class="container mx-auto px-4 max-w-4xl">
+  <div class="container mx-auto px-4md:max-w-2/3">
     <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
       <div class="card-body p-8 text-center">
         <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
           Ready to Submit?
         </h2>
-        <p class="text-body text-base-content/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal. <span class="font-semibold">The Microsoft Conference Management Toolkit (CMT) service was utilized to manage the peer-review process for this conference. The service was provided free of charge by Microsoft, which covered all associated expenses, including those related to Azure cloud services, software development, and technical support. The Link for submission is <a href="https://cmt3.research.microsoft.com/ICCTSD2026" class="link">https://cmt3.research.microsoft.com/ICCTSD2026</a> </span>
+        <p class="text-body text-base-content/80 mb-8md:max-w-2/3 mx-auto leading-relaxed text-justify">
+          Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal.
         </p>
-
         <!-- QR Code Section -->
         <div class="mb-8">
-          <div class="bg-white p-6 rounded-lg inline-block shadow-md border border-secondary/20">
-            <img src="/images/submission_qr.png" alt="Submission QR Code" class="aspect-square max-h-80 mx-auto mb-3">
+          <div class="bg-white rounded-lg inline-block shadow-md border border-secondary/20">
+            <img src="/images/submission_qr.png" alt="Submission QR Code" class="aspect-square max-h-60 mx-auto mb-3">
             <p class="text-sm text-base-content/70 font-semibold">Scan to Submit</p>
           </div>
         </div>
@@ -139,6 +128,8 @@ submission_declaration = "Submitting an article signifies that the work presente
             </button>
           </a>
         </div>
+
+        <span class=" mt-2 text-justify">The Microsoft Conference Management Toolkit (CMT) service is utilized to manage the peer-review process for this conference. The service is provided free of charge by Microsoft, which covers all associated expenses, including those related to Azure cloud services, software development, and technical support. The Link for submission is <a href="https://cmt3.research.microsoft.com/ICCTSD2026" class="link">https://cmt3.research.microsoft.com/ICCTSD2026</a> </span>
       </div>
     </div>
   </div>

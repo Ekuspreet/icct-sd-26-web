@@ -1,3 +1,79 @@
-<div class="text-secondary font-bold text-center py-20 font-montserrat text-h1">
-  ⏳Coming Soon
-</div>
+<%
+	// Registration page data (adjust values below as needed)
+	registration_intro = "NOTE: To participate in the conference of E2ACON 2025, at least one author must register and pay as per the fee mentioned below. The registration fee includes a conference kit (for offline participants only), attendance at all technical sessions, workshops, plenary talks, special sessions, and tea and snacks on both days. Certificates will be issued to all registered participants.";
+
+	publication_note = "Only accepted and presented papers will be published in the conference proceedings / journals. The page limit for each paper is 10 pages. Up to two additional pages are permitted for an additional charge of ₹1000 / $15 per extra page (Indians / International).";
+
+	student_note = "Students / Research Scholars must submit a scanned copy of their Institute ID card and the Registration form. They must produce the original Institute ID card at the time of presentation to validate student status.";
+
+	fees = [
+		{ category: 'Students / Research Scholars', inr: '4000 + 18% GST', usd: '150 + 18% GST' },
+		{ category: 'Faculty from Academics', inr: '5000 + 18% GST', usd: '200 + 18% GST' },
+		{ category: 'Delegates from Industry', inr: '6000 + 18% GST', usd: '250 + 18% GST' },
+		{ category: 'Attendee', inr: '2000 + 18% GST', usd: '50 + 18% GST' }
+	];
+
+	registration_links = [
+		{ label: 'Registration Payment Portal', url: '#' },
+		{ label: 'Post-payment Registration Form (Google Form)', url: '#' }
+	];
+%>
+
+<section class="pt-20 bg-base-100">
+  <div class="hero-content text-center mx-auto px-4">
+    <div>
+      <%- include('../components/section_title', { title: 'Registration', level: 'h2', subtitle: registration_intro }) %>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 mt-12">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <!-- Section 1: Important Note -->
+      <article class="bg-base-100 shadow rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-secondary font-montserrat">Important Note</h3>
+        <div class="divider my-3"></div>
+        <p class="text-body text-base-content/80 mb-3"> <%= registration_intro %> </p>
+        <p class="text-body text-base-content/80"><strong>Publication:</strong> <%= publication_note %></p>
+        <p class="text-body text-base-content/80 mt-3"><strong>Students:</strong> <%= student_note %></p>
+      </article>
+
+      <!-- Section 2: Cost of registration -->
+      <article class="bg-base-100 shadow rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-secondary font-montserrat">Cost of registration</h3>
+        <div class="divider my-3"></div>
+        <div class="overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th>Delegates</th>
+                <th>Indian (INR)</th>
+                <th>International (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% fees.forEach(function(f){ %>
+              <tr>
+                <td class="whitespace-normal"><%= f.category %></td>
+                <td><%= f.inr %></td>
+                <td><%= f.usd %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-base-content/60 mt-4">Additional pages: Indian authors ₹1000 per extra page, International authors $15 per extra page.</p>
+      </article>
+
+      <!-- Section 3: Important Links -->
+      <article class="bg-base-100 shadow rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-secondary font-montserrat">Important Links</h3>
+        <div class="divider my-3"></div>
+        <div class="flex flex-col gap-3">
+          <% registration_links.forEach(function(link){ %>
+          <a href="<%= link.url %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-secondary text-white hover:bg-secondary/90"> <%= link.label %> </a>
+          <% }) %>
+        </div>
+        <p class="text-xs text-base-content/60 mt-4">Please note: After submitting the registration fee, it is mandatory to complete the registration form. Your registration will be confirmed only after the form is received.</p>
+      </article>
+    </div>
+</section>

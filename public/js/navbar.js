@@ -3,6 +3,8 @@ const nav_id_map = {
   about: "about-us",
   cfp: "call-for-papers",
   submission: "submission",
+  awards: "awards",
+  sponsorship: "sponsorship",
   speakers: "invited-speakers",
   committees: "committee",
   registration: "registration",

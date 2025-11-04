@@ -1,36 +1,62 @@
 <% 
 committee = [
 {
-    designation : "Principal, Guru Nanak Dev Engineering College, Ludhiana",
-    title : "Chief Patron",
-    name : "Prof. (Dr.) Sehijpal Singh"
+  title: "Patrons",
+  members: [
+    {
+      name: "Prof. (Dr.) Sehijpal Singh",
+      designation: "Principal, Guru Nanak Dev Engineering College (GNDEC), Ludhiana"
+    },
+    {
+      name: "Prof. (Dr.) Ajay Kumar Sharma",
+      designation: "Director, National Institute of Technology (NIT), Delhi"
+    }
+  ]
 },
 {
-    designation : "Director, National Institute of Technology Delhi",
-    title : "Patron",
-    name : "Prof. (Dr.) Ajay Kumar Sharma"
+  title: "Advisory Board Chairs",
+  members: [
+    {
+      name: "Prof. (Dr.) Harvinder Singh",
+      designation: "Professor and Dean R&D, GNDEC"
+    },
+    {
+      name: "Prof. (Dr.) Geeta Sikka",
+      designation: "Professor, Department of Computer Science & Engineering, NIT"
+    }
+  ]
 },
 {
-    designation : "Professor and Head, Department of Computer Science & Engineering, GNDEC",
-    title : "Chairperson",
-    name : "Prof. (Dr.) Kiran Jyoti"
+  title: "Chairperson",
+  members: [
+    {
+      name: "Prof. (Dr.) Kiran Jyoti",
+      designation: "Professor and Head, Department of Computer Science & Engineering, GNDEC"
+    }
+  ]
 },
 {
-    designation : "Associate Professor, Department of Computer Science and Engineering, GNDEC",
-    title : "Convenor",
-    name : "Dr. Vivek Thapar"
+  title: "Convenor",
+  members: [
+    {
+      name: "Dr. Vivek Thapar",
+      designation: "Associate Professor, Department of Computer Science and Engineering, GNDEC"
+    }
+  ]
 },
 {
-    designation : "Assistant Professor, Department of Computer Science and Engineering, GNDEC",
-    title : "Organising Secretary",
-    name : "Dr. Sita Rani"
-},
-{
-    designation : "Assistant Professor, Department of Computer Science and Engineering, GNDEC",
-    title : "Organising Secretary",
-    name : "Dr. Priyanka Arora"
+  title: "Organising Secretaries",
+  members: [
+    {
+      name: "Dr. Sita Rani",
+      designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC"
+    },
+    {
+      name: "Dr. Priyanka Arora",
+      designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC"
+    }
+  ]
 }
-
 ]
 %>
 
@@ -48,14 +74,19 @@ committee = [
     <div class="divider"></div>
 
     <div class="mt-6 mb-10 px-2 md:max-w-2/4 mx-auto">
-      <ol class="text-left text-body flex flex-col gap-3">
-        <% for( let index = 0; index < committee.length; index++ ) { %>
-        <li>
-          <strong class="text-secondary"><%= committee[index].title %> : </strong>
-          <b><%= committee[index].name %>,</b> <%= committee[index].designation %>
-        </li>
+      <div class="text-left text-body flex flex-col gap-6">
+        <% for( let i = 0; i < committee.length; i++ ) { %>
+        <div>
+          <h3 class="text-secondary font-bold text-lg mb-2"><%= committee[i].title %></h3>
+          <ul class="flex flex-col gap-2">
+            <% for( let j = 0; j < committee[i].members.length; j++ ) { %>
+            <li>
+              <b><%= committee[i].members[j].name %>,</b> <%= committee[i].members[j].designation %>
+            </li>
+            <% } %>
+          </ul>
+        </div>
         <% } %>
-      </ol>
-
+      </div>
     </div>
 </section>

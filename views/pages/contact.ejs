@@ -25,18 +25,14 @@
 <!-- contact_us.ejs -->
 <section class="pt-12 bg-[#fafafa]">
   <div class="text-center">
-    <h1 class="text-h2 font-bold text-secondary font-montserrat">Contact Us</h1>
-    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-4 rounded-full"></div>
-    <p class="text-body text-base-content/80 max-w-3xl mx-auto">
-      Reach out to the organizing committee of ICCT-SD 2026 for queries, collaborations, or support.
-    </p>
+    <%- include('../components/section_title.ejs', { title: 'Contact Us', level: 'h2', subtitle: 'Reach out to the organizing committee of ICCT-SD 2026 for queries, collaborations, or support.' }) %>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <section class="bg-base-100 py-16">
-  <div class="container mx-auto px-4 max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div class="container mx-auto px-4 md:max-w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
 
     <!-- Convenor -->
     <div class="bg-white p-6 rounded-lg md:col-span-2 shadow-md border border-secondary/30">

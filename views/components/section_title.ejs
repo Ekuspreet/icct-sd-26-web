@@ -1,0 +1,22 @@
+<%-
+  // section_title component
+  // params:
+  //  - title (string) required
+  //  - level ('h1'|'h2'|'h3'|'h4') optional, default 'h2'
+  //  - subtitle (string) optional
+  //  - center (bool) optional, default true
+%>
+<%
+  var level = typeof level !== 'undefined' ? level : 'h2';
+  var Tag = level;
+  var centerClass = (typeof center === 'undefined' || center) ? 'text-center' : 'text-left';
+  var sizeClass = (Tag === 'h1') ? 'text-h1' : (Tag === 'h2') ? 'text-h2' : (Tag === 'h3') ? 'text-h3' : 'text-h4';
+  var titleClass = sizeClass + ' font-bold text-secondary font-montserrat';
+%>
+<div class="<%= centerClass %> mb-6">
+  <<%= Tag %> class="<%= titleClass %>"><%= title %></<%= Tag %>>
+  <% if (typeof subtitle !== 'undefined' && subtitle) { %>
+  <p class="text-body text-base-content/80 mt-2"><%= subtitle %></p>
+  <% } %>
+  <div class="heading-underline bg-gradient-to-r from-secondary to-secondary/40 mx-auto mt-4"></div>
+</div>

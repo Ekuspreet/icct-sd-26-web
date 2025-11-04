@@ -1,0 +1,77 @@
+Dr. Sumit Goswami
+
+Dr. Sumit Goswami currently serves as the Director of the Directorate of Planning and Coordination (DP&C) at the Defence Research and Development Organisation (DRDO), headquartered in New Delhi. With a solid academic foundation in computer science and networks, he has made significant contributions to research in information extraction, next-generation networks, and security analysis. In his present capacity, he oversees strategic planning for DRDO’s technology priority areas, leads talent identification initiatives such as the Young Scientist Laboratory program, and facilitates collaboration between the defence R&D ecosystem, industry, and academia.
+
+
+Dr. Sarbjot Singh Anand
+
+https://www.linkedin.com/in/sarabjot-singh-anand/?originalSubdomain=in
+https://scholar.google.com/citations?user=CtXeNuAAAAAJ&hl=en
+
+Dr. Sarbjot Singh Anand is a distinguished Indian data scientist, academic, and entrepreneur with over three decades of expertise in machine learning, data mining, and analytics. Following a successful academic career in the United Kingdom—including his tenure as Associate Professor at the University of Warwick—he returned to India in the early 2010s to co-found Tatras Data, a boutique data science consulting firm. In 2018, he established the Sabudh Foundation, dedicated to upskilling engineering students in machine learning and leveraging data-driven methodologies to address social challenges in education, agriculture, governance, and healthcare.
+He has authored more than 90 academic publications spanning areas such as recommender systems, prognostic modeling, churn prediction, and web personalization. Dr. Anand also holds academic and adjunct positions, including at the Indian Institute of Science Education and Research (IISER) Mohali, and continues to actively mentor and train emerging data scientists.
+
+Dr. Vishal Sharma
+
+https://scholar.google.com/citations?user=7whtsiEAAAAJ&hl=en
+https://orcid.org/0000-0001-7470-6506
+https://www.linkedin.com/in/vishal-sharma-a1b1292a/
+
+Dr. Vishal Sharma is a faculty member in the School of Electronics, Electrical Engineering, and Computer Science at Queen’s University Belfast (QUB), United Kingdom. His research focuses on the security of cyber-physical systems, unmanned aerial systems (UAVs), wireless and network security, distributed ledger (blockchain) technologies, and digital twins. He leads an active research group that recruits Ph.D. students in these areas.
+Prior to joining QUB, he held research positions at several international institutions, including the Singapore University of Technology and Design (SUTD), where he contributed to “future-proof blockchain” initiatives, and Soonchunhyang University in South Korea, where he worked in mobile network security laboratories. He has an extensive publication record with over 150 research outputs and has received multiple Best Paper Awards at international conferences.
+
+
+Dr. Munesh Singh
+
+https://scholar.google.com/citations?user=hzlW9pYAAAAJ&hl=en
+
+https://www.linkedin.com/in/dr-munesh-pal-72239517/
+
+Dr. Munesh Singh, a Senior Member of IEEE, serves as Associate Professor and Head of the Department of Computer Science and Engineering at the National Institute of Technology (NIT) Delhi. He holds a Ph.D. in Computer Science and Engineering from NIT Rourkela and possesses extensive experience in both academia and industry, including his tenure at Honeywell Technology Solutions Lab. His research interests encompass the Internet of Things (IoT), wireless sensor networks, cyber-physical systems, machine-to-machine communication, software-defined networking (SDN), connected vehicles, and security in IoT and cloud computing. Dr. Singh has published numerous research papers in reputed journals and conferences and actively supervises research scholars in developing next-generation intelligent and secure systems.
+
+Dr. Neeraj Kumar
+https://scholar.google.com/citations?user=gL9gR-4AAAAJ&hl=en
+
+Prof. Neeraj Kumar currently serves as Dean of Digital Content Transformation and Professor & Head of the Department of Computer Science and Engineering (DCSE) at Thapar Institute of Engineering and Technology, Patiala, Punjab, India. He has been recognized as a Highly Cited Researcher by Thomson Reuters (Web of Science) in 2019, 2020, and 2021, ranking among the top 1% of researchers worldwide in Computer Science. According to research.com, he holds the first position in India and ranks 220th globally.
+He has supervised 16 Ph.D., 25 M.E./M.Tech., and over 30 undergraduate projects. His work has received multiple accolades, including Best Paper Awards from IEEE Systems Journal (2018, 2020), IEEE ICC 2018 (Kansas City), JNCA 2021, and IEEE TrustCom 2021. He has also received the Mid-Career Research Award from the IEEE Technical Committee on Scalable Computing and has been recognized as the Best Researcher by his institute for eight consecutive years for excellence in teaching and research.
+In 2024, Prof. Kumar received the Award of Excellence from Samsung Research India for his innovative contribution in developing a GenAI-based network cloning solution for network performance evaluation. Earlier, in 2019, he was honored with the Shiv Nath Rai Kohli Award for his outstanding contributions to teaching and research in Punjab.
+He has successfully executed research projects exceeding ₹6 crore in funding from agencies such as DST, CSIR, UGC, TCS, and various industrial collaborations. His international collaborations span countries including Austria, Poland, the UK, the USA, China, and Saudi Arabia. Currently, he is supervising more than 20 Ph.D. scholars, 25 postgraduate, and over 50 undergraduate students.
+Prof. Kumar serves as Associate Editor for ACM Computing Surveys, IEEE Transactions on Intelligent Transportation Systems, IEEE Transactions on Network and Service Management, and IEEE Transactions on Artificial Intelligence. His research focuses on Artificial Intelligence and Cybersecurity, with impactful collaborations involving Samsung Research India, Tata Power, GE, Tata Consultancy Services, and British Telecom. Through these partnerships, he has developed advanced solutions for safeguarding critical infrastructures such as smart grids and healthcare systems. His work employs blockchain-based smart contracts and quantum key distribution to protect digital assets, enhance identity security, enable secure ownership transfer, and support sustainable, secure, and transparent digital ecosystems. Many of these projects involve active collaboration with international universities in the UK, Austria, Poland, and Saudi Arabia.
+
+
+Dr. Manjeet Singh
+
+https://www.linkedin.com/in/manjeet-singh-makkar-9173945b/?originalSubdomain=in
+
+https://scholar.google.com/citations?user=PR5OuZIAAAAJ&hl=en
+Dr. Manjeet Singh is a distinguished professional with over 27 years of experience, including four years in administrative leadership as Head of Department. His extensive R&D portfolio includes the design and development of 30 machines and technologies, primarily focused on conservation, precision, and sensor-based agricultural machinery. Of these, 22 technologies have been recommended for commercialization and farmer adoption by the university’s research evaluation committee, while 3 have been licensed to 126 manufacturers for large-scale production.
+He has successfully executed 18 externally funded research projects supported by agencies such as the World Bank, ICAR, SERB, DST, DoA&FW, and industry partners, including one major project under NAIP. His research contributions include 341 publications—comprising 101 papers in peer-reviewed journals, 64 books, chapters, manuals, and bulletins, and 66 papers presented at national and international conferences. To safeguard intellectual property, he has filed five patent applications for innovative technologies.
+Dr. Singh has been the recipient of numerous honors, including the National Societal Innovation Award (2019) by NRDC, the Team Award (2019) from the Dr. Gurdev Singh Khush Foundation for Advancement of Agricultural Sciences, and a Cash Award and Citation (2019) from the Honorable Governor of Punjab. He was elected Fellow of the Agricultural Engineering Division of The Institution of Engineers (India), Kolkata, in 2019. The Indian Society of Agricultural Engineers (ISAE) conferred upon him the Jyoti Award (2011) and a Team Award (2019). The Indian Society of Technical Education (ISTE) recognized him for supervising the best M.Tech thesis in Agricultural Engineering (2008). He also received an Award of Honour (2011) during the International Indo-US Workshop on Precision Agriculture Technologies organized by PAU Ludhiana and Colorado State University, USA, and was conferred the Senior Professional Engineer Award (2016) by the College of Technology and Engineering, Udaipur.
+Under technology transfer initiatives, Dr. Singh has organized 113 training programs, including 43 coordinated for state government officials and farmers. He has delivered 210 lectures—84 of them invited—at various extension programs and national-level events, along with 18 live or recorded TV and radio broadcasts. Additionally, he has conducted 93 demonstrations, exhibitions, and machinery displays at Kisan Melas, field days, and workshops organized by state government departments, PAU Ludhiana, regional research stations, and Krishi Vigyan Kendras (KVKs).
+He has participated in 24 international conferences, including 12 held abroad—in the USA, Canada, Japan, Russia, South Korea, New Zealand, and China—primarily centered on precision agriculture. His international participation was supported through travel grants from DST, SERB, and AICTE.
+
+Dr. Sukhjit Singh Sehra
+
+https://www.linkedin.com/in/sukhjitsehra/?originalSubdomain=ca
+https://scholar.google.com/citations?user=VvDikIUAAAAJ&hl=en
+Dr. Sukhjit Singh Sehra is an Assistant Professor in the Department of Computer Science at Wilfrid Laurier University, Canada. He earned his Ph.D. in Computer Science and Engineering from I.K. Gujral Punjab Technical University, India, in 2018, following over a decade of teaching at Guru Nanak Dev Engineering College, India, and professional experience as a Data Scientist in the Canadian industry.
+His research centers on spatial analytics and smart navigational systems that integrate indoor–outdoor routing, augmented reality, machine learning, and natural language processing. He employs methodologies such as semantic segmentation, large-scale spatial data analysis, and artificial intelligence for geographic text to develop solutions supporting intelligent transportation systems and eco-friendly smart city routing.
+Dr. Sehra supervises undergraduate and graduate research projects that combine machine learning and deep learning with spatial data science. He also leads a research group that welcomes motivated students to engage in thesis-based master’s or undergraduate research programs.
+
+Ms. Suchanda Basu
+
+https://www.linkedin.com/in/suchanda-basu-a9b09b9/
+
+With over 21 years of experience in the IT industry, Ms. Basu currently serves as Principal Product Manager for the DevOps Cloud business, where she leads industry verticalization and alliance partner strategies to enable sales and product teams for effective execution.
+Her professional background spans Product Management, Application Services, and Quality Engineering, with over two decades of expertise in compute, storage, and network systems, as well as in managing enterprise applications and product portfolios. She has demonstrated a strong track record in partner management, encompassing relationship building, go-to-market strategy, product evaluation, incubation, and enablement.
+Ms. Basu has successfully led service creation and growth strategies across multiple sectors, including High-Tech and Manufacturing, Life Sciences, Telecommunications, and Banking, while equipping sales and delivery teams with effective tools and methodologies. Her experience includes managing offering lifecycles, driving pre-sales initiatives, developing intellectual property, and establishing Centers of Excellence to scale strategic programs.
+She possesses deep expertise in digital assurance strategy, market research, competitive analysis, and go-to-market execution, with a focus on achieving measurable business impact through effective executive communication and cross-functional collaboration across global teams.
+
+
+Mr. Parminder Singh Sandhu
+
+https://www.linkedin.com/in/parmindersandhu83/
+
+Mr. Parminder Singh Sandhu is currently serving as an Information Security Manager at Apple Inc., San Francisco, USA. He is a highly skilled cybersecurity professional with extensive expertise in vulnerability assessment, web application security, and penetration testing. His technical proficiency spans a wide range of industry-standard tools, including Qualys Guard, Qualys WAS, WhiteHat Sentinel, Burp Suite, SQLmap, Metasploit, Nessus, and Wireshark.
+He possesses substantial experience in security controls testing and remediation, incident investigation, and pattern analysis, with a strong capability in validating complex vulnerabilities through both manual and open-source methodologies. Mr. Sandhu has also overseen data loss prevention (DLP) operations using McAfee ePO, conducted alert analysis via Symantec DLP and Proofpoint for non-public information (NPI) threats, and ensured policy compliance in domains such as access control, intellectual property monitoring, and internet usage governance.
+In addition, he is proficient in intrusion detection and prevention system (IDS/IPS) console monitoring, leveraging platforms such as Zenoss Core and SiteProtector, and in administering firewall and security policy configurations using Netscreen Security Manager (NSM).
