@@ -10,6 +10,7 @@ const nav_id_map = {
   registration: "registration",
   gallery: "gallery",
   contact: "contact-us",
+  publications: "publications",
 };
 var current_path = window.location.pathname.split("/").pop();
 current_path = current_path.replace(".html", "");

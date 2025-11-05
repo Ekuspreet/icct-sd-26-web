@@ -10,6 +10,7 @@ const pages = [
   { name: "submission", title: "Submission" },
   { name: "sponsorship", title: "Sponsorship" },
   { name: "awards", title: "Awards" },
+  { name: "publications", title: "Publications" },
 ];
 
 const webController = {};
