@@ -11,8 +11,8 @@ submission_content = [
  "Providing a uniform format for papers that appear in the conference proceedings is the aim of the conference template.",
  "The conference templates include instructions on how to write and format conference papers.",
  "It is required that authors utilize the conference manuscript templates listed below.",
- "All submissions made by ICCT-SD-2026 will undergo a plagiarism check by by Turnitin/ iThenticate.",
- "Submissions that have a similarity score of 20% or higher will be rejected before they can be sent for review.",
+ "All the submitted papers will undergo plagiarism check by Turnitin/ Ithenticate before underdog review process.",
+ "Papers with similarity score more than 20% will not be considered for review and rejected directly.",
  "Please make sure that before submitting your conference paper to the conference, all guidance text has been eliminated."
 ];
 
@@ -22,13 +22,16 @@ submission_content = [
 submission_declaration = "Submitting an article signifies that the work presented has not been previously published (except as an abstract, a published lecture, or an academic thesis), is not currently under review by any other publication, has been approved for submission by all authors and, where applicable, by the relevant institutional authorities, and that, upon acceptance, it will not be published elsewhere in the same form, in English or any other language, whether in print or electronic format, without the written consent of the copyright holder. To ensure adherence to these conditions, the article may be subject to verification using originality or duplication detection software.";
 %>
 
-<!-- Hero Section -->
-<section class="pt-20 bg-[#fafafa]">
-  <div class="hero-content text-center mx-auto px-4">
+
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center ">
     <%- include('../components/section_title', { text: 'Paper Submission' }) %>
-  </div>
+    <p class="text-justify text-body">
+      ICCT-SD-26 invites researchers, practitioners, and students worldwide to submit previously unpublished original papers for consideration for presentation at the conference in English.
+    </p>
   </div>
 </section>
+
 
 <div class="divider"></div>
 
@@ -93,42 +96,69 @@ submission_declaration = "Submitting an article signifies that the work presente
 
 <!-- Submission Portal Section -->
 <section class="py-20 bg-base-100">
-  <div class="container mx-auto px-4md:max-w-2/3">
+  <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
-      <div class="card-body p-8 text-center">
-        <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
-          Ready to Submit?
-        </h2>
-        <p class="text-body text-base-content/80 mb-8md:max-w-2/3 mx-auto leading-relaxed text-justify">
-          Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal.
-        </p>
-        <!-- QR Code Section -->
-        <div class="mb-8">
-          <div class="bg-white rounded-lg inline-block shadow-md border border-secondary/20">
-            <img src="/images/submission_qr.png" alt="Submission QR Code" class="aspect-square max-h-60 mx-auto mb-3">
-            <p class="text-sm text-base-content/70 font-semibold">Scan to Submit</p>
-          </div>
-        </div>
-        <a href="https://cmt3.research.microsoft.com/ICCTSD2026">
-          <button class="btn btn-secondary btn-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
-            Submit Your Paper
-          </button>
-        </a>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/conference">
-            <button class="btn btn-outline btn-secondary btn-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Download Template
-            </button>
-          </a>
+      <div class="card-body p-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
+            Ready to Submit?
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+          <p class="text-body text-base-content/80 md:max-w-2/3 mx-auto leading-relaxed">
+            Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal.
+          </p>
         </div>
 
-        <span class=" mt-2 text-justify">The Microsoft Conference Management Toolkit (CMT) service is utilized to manage the peer-review process for this conference. The service is provided free of charge by Microsoft, which covers all associated expenses, including those related to Azure cloud services, software development, and technical support. The Link for submission is <a href="https://cmt3.research.microsoft.com/ICCTSD2026" class="link">https://cmt3.research.microsoft.com/ICCTSD2026</a> </span>
+        <!-- Main Content Grid -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- QR Code Section -->
+          <div class="flex flex-col items-center justify-center">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-secondary/20">
+              <img src="/images/submission_qr.png" alt="Submission QR Code" class="w-full max-w-[200px] aspect-square mx-auto mb-3">
+              <p class="text-body font-semibold text-center text-secondary">Scan to Submit</p>
+            </div>
+          </div>
+
+          <!-- Action Buttons Section -->
+          <div class="flex flex-col justify-center gap-4">
+            <a href="https://cmt3.research.microsoft.com/ICCTSD2026" target="_blank" rel="noopener noreferrer" class="w-full">
+              <button class="btn btn-secondary btn-lg w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                Submit Your Paper
+              </button>
+            </a>
+            <a href="/conference" class="w-full">
+              <button class="btn btn-outline btn-secondary btn-lg w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Template
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- CMT Information -->
+        <div class="p-6 bg-white rounded-lg border-l-4 border-secondary/40 shadow-sm">
+          <h4 class="font-semibold text-secondary mb-3 text-body">About the Submission Platform</h4>
+          <p class="text-body text-base-content/80 leading-relaxed mb-3">
+            The Microsoft Conference Management Toolkit (CMT) service is utilized to manage the peer-review process for this conference. The service is provided free of charge by Microsoft, which covers all associated expenses, including those related to Azure cloud services, software development, and technical support.
+          </p>
+          <div class="flex items-center gap-2 mt-4 p-3 bg-base-100 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            <div class="flex-1 min-w-0">
+              <p class="text-small text-base-content/70 font-semibold mb-1">Submission Portal Link:</p>
+              <a href="https://cmt3.research.microsoft.com/ICCTSD2026" target="_blank" rel="noopener noreferrer" class="text-body text-secondary hover:underline break-all">
+                https://cmt3.research.microsoft.com/ICCTSD2026
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

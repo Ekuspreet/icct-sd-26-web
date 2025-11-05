@@ -132,7 +132,6 @@ dates = [
   </div>
 </section>
 <div class="divider "></div>
-
 <div class="flex md:flex-row flex-col justify-center items-center  ">
 
   <!-- Proceedings -->
@@ -144,26 +143,26 @@ dates = [
       <% for( let i=0; i < proceedings.length; ++i ) { %>
       <div class="timeline-item aspect-square h-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white  ">
         <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
-        <h6 class="text-caption text-center"> *Applied</h6>
       </div>
       <% } %>
     </div>
+    <h6 class="text-caption text-center mt-2"> *Applied</h6>
   </div>
   <!-- Technical Partners -->
   <div class="divider md:divider-horizontal"></div>
 
-  <div class="  md:max-w-2/4 mx-auto rounded-xl py-10 flex-1 ">
+  <div class="  md:max-w-2/4 mx-auto py-10 flex-1 ">
     <%- include('../components/section_title.ejs', {
       text: 'Technical Partners'
     }) %>
     <div class="flex justify-center md:flex-row flex-col gap-4 ">
       <% for( let i=0; i < technical_partners.length; ++i ) { %>
       <div class="timeline-item aspect-square h-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white ">
-        <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="mx-auto object-contain  w-auto  aspect-square" />
+        <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="object-contain " />
       </div>
       <% } %>
     </div>
-    <p class=" text-sm px-3 relative py-3 ">*The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+
   </div>
 </div>
 <div class="divider"></div>

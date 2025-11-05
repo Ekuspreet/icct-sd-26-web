@@ -101,82 +101,120 @@
   %>
 
 
-<section>
-  <div class="text-center mt-10">
+<!-- Hero Section -->
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center">
     <%- include('../components/section_title', { text: 'Keynote Speakers' }) %>
-    <div class="divider"></div>
+    <p class="text-justify text-body">
+      Meet our distinguished keynote speakers - leading experts, researchers, and industry professionals who are shaping the future of technology and sustainable development.
+    </p>
   </div>
+</section>
 
-  <div class="mt-6 mb-10 px-2 md:max-w-4xl mx-auto">
-    <div class="grid grid-cols-1 gap-6">
-      <% speakers.forEach(function(s){ %>
-      <article class="relative overflow-hidden group bg-base-100 shadow-lg rounded-lg transition-transform hover:scale-[1.01]">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-secondary/40"></div>
-        <div class="pointer-events-none absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-gradient-to-br from-secondary/20 to-secondary/5 opacity-60 blur-3xl"></div>
+<div class="divider my-20"></div>
 
-        <div class="collapse collapse-arrow">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title p-6 pb-2">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
+<!-- Speakers Grid Section -->
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4 md:max-w-6xl">
+    <div class="grid grid-cols-1 gap-8">
+      <% speakers.forEach(function(s, idx){ %>
+      <article class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary via-secondary/60 to-secondary/40"></div>
+        <div class="pointer-events-none absolute -right-20 -top-20 w-60 h-60 rounded-full bg-gradient-to-br from-secondary/10 to-secondary/5 opacity-60 blur-3xl group-hover:opacity-80 transition-opacity duration-300"></div>
+
+        <div class="card-body p-0">
+          <div class="flex flex-col md:flex-row gap-6 p-8">
+            <!-- Profile Image - Larger and more prominent -->
+            <div class="flex-shrink-0 relative">
+              <div class="relative">
                 <% if (s.image) { %>
-                <img src="<%= s.image %>" alt="<%= s.name %>" class="w-20 h-20 rounded-full object-cover border border-base-200" />
+                <img src="<%= s.image %>" alt="<%= s.name %>" class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300 mx-auto" />
                 <% } else { %>
                 <% var initials = (s.name||'').split(' ').map(function(n){ return n.charAt(0); }).slice(0,2).join('').toUpperCase(); %>
-                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center text-white text-xl font-bold border border-base-200">
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center text-white text-5xl font-bold border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300 mx-auto">
                   <%= initials %>
                 </div>
                 <% } %>
-              </div>
 
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-secondary font-montserrat"><%= s.name %></h3>
+                <!-- Badge with speaker number -->
 
-                <div class="mt-2 flex flex-wrap gap-2 items-center">
-                  <% if (s.socials && s.socials.linkedin) { %>
-                  <a href="<%= s.socials.linkedin %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral/10 hover:bg-neutral/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.8v1.6h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6v6.5h-4v-5.7c0-1.4 0-3.2-2-3.2-2 0-2.3 1.6-2.3 3.1V20h-4V8z" />
-                    </svg>
-                    <span class="text-sm">LinkedIn</span>
-                  </a>
-                  <% } %>
-
-                  <% if (s.socials && s.socials.googleScholar) { %>
-                  <a href="<%= s.socials.googleScholar %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral/10 hover:bg-neutral/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M12 3l8 4.5v9l-8 4.5L4 16.5v-9L12 3zm0 2.18L6 8.03v6.09l6 3.72 6-3.72V8.03l-6-2.85z" />
-                    </svg>
-                    <span class="text-sm">Scholar</span>
-                  </a>
-                  <% } %>
-
-                  <% if (s.socials && s.socials.orcid) { %>
-                  <a href="<%= s.socials.orcid %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral/10 hover:bg-neutral/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 11.001 13.999A7 7 0 0112 5zm0 2a5 5 0 100 10 5 5 0 000-10z" />
-                    </svg>
-                    <span class="text-sm">ORCID</span>
-                  </a>
-                  <% } %>
-                </div>
-
-                <% var full = (s.description || '').trim(); var limit = 220; var shortText = full.length > limit ? full.slice(0, limit).trim() + '...' : full; %>
-                <p class="mt-2 text-body text-sm text-base-content/80 peer-checked:hidden">
-                  <%= shortText %>
-                </p>
               </div>
             </div>
-          </div>
 
-          <div class="collapse-content px-6 pb-6">
-            <p class="text-body text-sm text-base-content/80 ml-24">
-              <%= full %>
-            </p>
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <!-- Name and Title -->
+              <div class="mb-4">
+                <h3 class="text-h3 font-bold text-secondary font-montserrat mb-2 flex items-center gap-2">
+                  <%= s.name %>
+                </h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-secondary to-secondary/40 rounded-full"></div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                <% if (s.socials && s.socials.linkedin) { %>
+                <a href="<%= s.socials.linkedin %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-secondary/30 hover:border-secondary hover:shadow-md transition-all duration-300 group/link">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary group-hover/link:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.8v1.6h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6v6.5h-4v-5.7c0-1.4 0-3.2-2-3.2-2 0-2.3 1.6-2.3 3.1V20h-4V8z" />
+                  </svg>
+                  <span class="text-body font-medium">LinkedIn</span>
+                </a>
+                <% } %>
+
+                <% if (s.socials && s.socials.googleScholar) { %>
+                <a href="<%= s.socials.googleScholar %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-secondary/30 hover:border-secondary hover:shadow-md transition-all duration-300 group/link">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary group-hover/link:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3l8 4.5v9l-8 4.5L4 16.5v-9L12 3zm0 2.18L6 8.03v6.09l6 3.72 6-3.72V8.03l-6-2.85z" />
+                  </svg>
+                  <span class="text-body font-medium">Google Scholar</span>
+                </a>
+                <% } %>
+
+                <% if (s.socials && s.socials.orcid) { %>
+                <a href="<%= s.socials.orcid %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-secondary/30 hover:border-secondary hover:shadow-md transition-all duration-300 group/link">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary group-hover/link:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 11.001 13.999A7 7 0 0112 5zm0 2a5 5 0 100 10 5 5 0 000-10z" />
+                  </svg>
+                  <span class="text-body font-medium">ORCID</span>
+                </a>
+                <% } %>
+              </div>
+
+              <!-- Description -->
+              <div class="relative">
+                <div class="p-6 bg-white/80 rounded-xl border-l-4 border-secondary/40 shadow-sm">
+                  <p class="text-body text-base-content/80 leading-relaxed text-justify">
+                    <%= s.description %>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
       <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
+  <div class="container mx-auto px-4 md:max-w-2/3">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
+      <div class="card-body p-12 text-center">
+
+        <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
+          Don't Miss Out!
+        </h2>
+        <p class="text-body text-base-content/80 mb-8 md:max-w-2/3 mx-auto leading-relaxed">
+          Register now to attend these inspiring keynote sessions and gain insights from world-class experts in technology and sustainable development.
+        </p>
+        <a href="/registration" class="btn btn-secondary btn-lg">
+          Register Now
+        </a>
+      </div>
     </div>
   </div>
 </section>
