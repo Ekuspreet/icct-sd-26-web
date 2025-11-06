@@ -82,9 +82,10 @@ dates = [
 
 <span>
   <% 
-    technical_partners = [
-      { src: "/images/cmt.png", alt: "CMT" },
-      { src: "/images/csi.png", alt: "CSI" }
+  technical_partners = [
+  { src: "/images/ieee.png", alt: "CSI" },
+  { src: "/images/csi.png", alt: "CSI" },
+  { src: "/images/cmt.png", alt: "CMT" },
     ];
   %>
 </span>
@@ -162,7 +163,7 @@ dates = [
     }) %>
     <div class="flex justify-center md:flex-row flex-col gap-4 ">
       <% for( let i=0; i < proceedings.length; ++i ) { %>
-      <div class="timeline-item aspect-square h-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white  ">
+      <div class="timeline-item aspect-square h-40 rounded-xl  overflow-hidden border-base-300 bg-white  ">
         <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
         <h6 class="text-caption text-center mt-2"> *Applied</h6>
       </div>
@@ -178,7 +179,7 @@ dates = [
     }) %>
     <div class="flex justify-center items-center md:flex-row flex-col gap-4 ">
       <% for( let i=0; i < technical_partners.length; ++i ) { %>
-      <div class="timeline-item aspect-square h-40 w-40 rounded-xl border-2 overflow-hidden border-base-300 bg-white flex items-center justify-center p-2">
+      <div class="timeline-item aspect-square h-40 w-40 rounded-xl  overflow-hidden border-base-300 bg-white flex items-center justify-center p-2">
         <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="object-contain w-full h-full" />
       </div>
       <% } %>

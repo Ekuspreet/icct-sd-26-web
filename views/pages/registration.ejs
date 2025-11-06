@@ -2,7 +2,7 @@
 	// Registration page data (adjust values below as needed)
   registration_intro = " To participate in the ICCT-SD-2026 conference, at least one author of each accepted paper must register and pay the applicable fee as specified below. The registration fee includes a conference kit (for offline participants only), access to all technical sessions, workshops, plenary and special sessions, as well as tea and snacks on both days. Certificates will be issued to all registered participants.";
 
-	publication_note = "Only papers that are both accepted and presented will be published in the conference proceedings or associated journals. Each paper is limited to 10 pages; up to two additional pages may be included for an extra fee of ₹tbd per page for Indian authors or $tbd per page for international authors.";
+	publication_note = "Only papers that are both accepted and presented will be published in the conference proceedings or associated journals. Each paper is limited to 8 pages; up to two additional pages may be included for an extra fee of ₹100 per page for Indian authors or $15 per page for international authors.";
 
 	student_note = "Students and research scholars are required to submit a scanned copy of their institutional ID card along with the registration form. The original ID card must be presented at the time of paper presentation.";
 
@@ -108,15 +108,21 @@
           <% registration_links.forEach(function(link){ %>
           <a href="<%= link.url %>" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-3 p-6 rounded-lg bg-white border-2 border-secondary/30 hover:border-secondary hover:shadow-lg transition-all duration-300 group">
             <span class="text-4xl group-hover:scale-110 transition-transform duration-300"><%= link.icon %></span>
-            <span class="text-body font-semibold text-secondary text-center"><%= link.label %></span>
+            <span class="text-body font-semibold text-secondary text-center"><%= link.label %> <br>
+              <div class="text-body text-error"> To Be Updated</div>
+            </span>
           </a>
           <% }) %>
         </div>
 
         <div class="mt-8 p-4 bg-white/80 rounded-lg border-l-4 border-secondary/40">
-          <p class="text-small text-base-content/70 text-center">
-            <strong class="text-secondary">Important:</strong> After submitting the registration fee, it is mandatory to complete the registration form. Your registration will be confirmed only after the form is received.
+          <p class="text-body font-semibold text-secondary mb-3">
+            <span class="text-error">Important Points:</span>
           </p>
+          <ul class="list-disc list-inside text-small text-base-content/70 space-y-2">
+            <li>After submitting the registration fee, it is mandatory to complete the registration form. Your registration will be confirmed only after the form is received. Please keep your payment receipt for reference.</li>
+            <li>On-campus accommodation will be provided on a first-come-first-serve (FCFS) basis at a nominal rate.</li>
+          </ul>
         </div>
       </div>
     </article>

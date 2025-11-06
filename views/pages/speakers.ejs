@@ -21,7 +21,7 @@
       description: `Dr. Sarbjot Singh Anand is a distinguished Indian data scientist, academic, and entrepreneur with over three decades of expertise in machine learning, data mining, and analytics. Following a successful academic career in the United Kingdom—including his tenure as Associate Professor at the University of Warwick—he returned to India in the early 2010s to co-found Tatras Data, a boutique data science consulting firm. In 2018, he established the Sabudh Foundation, dedicated to upskilling engineering students in machine learning and leveraging data-driven methodologies to address social challenges in education, agriculture, governance, and healthcare. He has authored more than 90 academic publications spanning areas such as recommender systems, prognostic modeling, churn prediction, and web personalization. Dr. Anand also holds academic and adjunct positions, including at the Indian Institute of Science Education and Research (IISER) Mohali, and continues to actively mentor and train emerging data scientists.`,
     },
     {
-      name: "Dr. Vishal Sharma",
+      name: "Prof. (Dr.) Vishal Sharma",
       socials: {
         linkedin: "https://www.linkedin.com/in/vishal-sharma-a1b1292a/",
         googleScholar:
@@ -31,7 +31,14 @@
       description: `Dr. Vishal Sharma is a faculty member in the School of Electronics, Electrical Engineering, and Computer Science at Queen's University Belfast (QUB), United Kingdom. His research focuses on the security of cyber-physical systems, unmanned aerial systems (UAVs), wireless and network security, distributed ledger (blockchain) technologies, and digital twins. He leads an active research group that recruits Ph.D. students in these areas. Prior to joining QUB, he held research positions at several international institutions, including the Singapore University of Technology and Design (SUTD) and Soonchunhyang University in South Korea. He has an extensive publication record with over 150 research outputs and has received multiple Best Paper Awards at international conferences.`,
     },
     {
-      name: "Dr. Munesh Singh",
+      name: "Prof. (Dr.) Deepak Garg",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/deepakgarg1/"
+      },
+      description: 'Dr. Deepak Garg is the Vice-Chancellor of SR University, Telangana, and a distinguished academic leader in the field of Computer Science and Artificial Intelligence. With over 25 years of experience across premier \institutions, he has led transformative initiatives in AI education, research, and large-scale skill development, impacting thousands of faculty members and students nationwide. A prolific researcher and academic administrator, Dr. Garg has held leadership roles in leading professional bodies and contributed significantly to quality assurance and accreditation in higher education. At SR University, he is spearheading a vision focused on research excellence, industry-academia collaboration, innovation-driven learning, and societal impact, positioning the university as a rising hub of technology and entrepreneurship in India.'
+    },
+    {
+      name: "Prof. (Dr.) Munesh Singh",
       socials: {
         linkedin: "https://www.linkedin.com/in/dr-munesh-pal-72239517/",
         googleScholar:
@@ -41,7 +48,7 @@
       description: `Dr. Munesh Singh, a Senior Member of IEEE, serves as Associate Professor and Head of the Department of Computer Science and Engineering at the National Institute of Technology (NIT) Delhi. He holds a Ph.D. in Computer Science and Engineering from NIT Rourkela and possesses extensive experience in both academia and industry, including his tenure at Honeywell Technology Solutions Lab. His research interests encompass the Internet of Things (IoT), wireless sensor networks, cyber-physical systems, machine-to-machine communication, software-defined networking (SDN), connected vehicles, and security in IoT and cloud computing. Dr. Singh has published numerous research papers in reputed journals and conferences and actively supervises research scholars in developing next-generation intelligent and secure systems.`,
     },
     {
-      name: "Prof. Neeraj Kumar",
+      name: "Prof. (Dr.) Neeraj Kumar",
       socials: {
         linkedin: null,
         googleScholar:
@@ -73,15 +80,6 @@
       description: `Dr. Sukhjit Singh Sehra is an Assistant Professor in the Department of Computer Science at Wilfrid Laurier University, Canada. He earned his Ph.D. in Computer Science and Engineering from I.K. Gujral Punjab Technical University, India. His research centers on spatial analytics and smart navigational systems combining indoor–outdoor routing, augmented reality, machine learning, and natural language processing. He supervises undergraduate and graduate research projects in spatial data science and related AI applications.`,
     },
     {
-      name: "Ms. Suchanda Basu",
-      socials: {
-        linkedin: "https://www.linkedin.com/in/suchanda-basu-a9b09b9/",
-        googleScholar: null,
-        orcid: null,
-      },
-      description: `With over 21 years in IT, Ms. Suchanda Basu is Principal Product Manager for the DevOps Cloud business, leading industry verticalization and alliance partner strategies. Her experience spans product management, application services, quality engineering, and partner management. She has led service creation and growth strategies across multiple sectors and has expertise in digital assurance strategy, market research, and go-to-market execution.`,
-    },
-    {
       name: "Mr. Parminder Singh Sandhu",
       socials: {
         linkedin: "https://www.linkedin.com/in/parmindersandhu83/",
@@ -96,7 +94,7 @@
 
 <% for( let index = 0; index < speakers.length; index++ ) { 
   let s = speakers[index];
-    s.image = "images/speakers/" + s.name.toLowerCase().replace(/\./g, '').replace(/ /g, '_') + '.png';
+    s.image = "images/speakers/" + s.name.toLowerCase().replace(/\./g, '').replace(/\(/g, '').replace(/\)/g, '').replace(/ /g, '_') + '.png';
 }
   %>
 
@@ -111,10 +109,10 @@
   </div>
 </section>
 
-<div class="divider my-20"></div>
+<div class="divider"></div>
 
 <!-- Speakers Grid Section -->
-<section class="py-20 bg-base-100">
+<section class="py-12 bg-base-100">
   <div class="container mx-auto px-4 md:max-w-6xl">
     <div class="grid grid-cols-1 gap-8">
       <% speakers.forEach(function(s, idx){ %>
@@ -124,7 +122,7 @@
         <div class="pointer-events-none absolute -right-20 -top-20 w-60 h-60 rounded-full bg-gradient-to-br from-secondary/10 to-secondary/5 opacity-60 blur-3xl group-hover:opacity-80 transition-opacity duration-300"></div>
 
         <div class="card-body p-0">
-          <div class="flex flex-col md:flex-row gap-6 p-8">
+          <div class="flex flex-col md:flex-row <%= idx % 2 === 1 ? 'md:flex-row-reverse' : '' %> gap-6 p-8">
             <!-- Profile Image - Larger and more prominent -->
             <div class="flex-shrink-0 relative">
               <div class="relative">
