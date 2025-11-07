@@ -8,7 +8,6 @@ const nav_id_map = {
   speakers: "invited-speakers",
   committees: "committee",
   registration: "registration",
-  gallery: "gallery",
   contact: "contact-us",
   publications: "publications",
 };

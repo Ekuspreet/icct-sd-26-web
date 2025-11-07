@@ -13,7 +13,6 @@ const pages = [
   { name: "speakers", path: "speakers.html" },
   { name: "committees", path: "committees.html" },
   { name: "registration", path: "registration.html" },
-  { name: "gallery", path: "gallery.html" },
   { name: "contact", path: "contact.html" },
   { name: "sponsorship", path: "sponsorship.html" },
   { name: "awards", path: "awards.html" },
