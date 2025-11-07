@@ -75,27 +75,12 @@
   }
 ]; %>
 
-<section class="pt-10 bg-base-100">
-  <div class="container mx-auto px-4 md:max-w-2/3">
-    <div class="text-center ">
-      <h2 class="text-h2 font-bold text-secondary  font-montserrat">Scope</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-      </div>
-      <p class="text-body text-justify text-base-content/80  mx-auto">
-        The International Conference on Intelligent Computational and Communication Technologies for
-        Sustainable Development (ICCT-SD 2026) focuses on integrating intelligent computational methods and
-        advanced communication technologies to address global sustainability challenges. It provides a
-        platform for researchers, academicians, industry professionals, and policymakers to exchange
-        knowledge and present innovations that support the UN Sustainable Development Goals (SDGs). The
-        scope covers Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart
-        Systems, Big Data Analytics and Cloud Computing, Next-Generation Networks, Security and Privacy, and
-        other emerging technologies. Emphasis is placed on sustainable solutions for sectors such as
-        healthcare, agriculture, urban development, manufacturing, and climate resilience. The conference
-        aims to foster collaboration, promote technological innovation, and translate research into
-        practical applications, contributing to a more sustainable and equitable future through
-        interdisciplinary engagement and knowledge dissemination.
-      </p>
-    </div>
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center ">
+    <%- include('../components/section_title', { text: 'Scope' }) %>
+    <p class="text-justify text-body">
+      The International Conference on Intelligent Computational and Communication Technologies for Sustainable Development (ICCT-SD 2026) focuses on integrating intelligent computational methods and advanced communication technologies to address global sustainability challenges. It provides a platform for researchers, academicians, industry professionals, and policymakers to exchange knowledge and present innovations that support the UN Sustainable Development Goals (SDGs). The scope covers Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart Systems, Big Data Analytics and Cloud Computing, Next-Generation Networks, Security and Privacy, and other emerging technologies. Emphasis is placed on sustainable solutions for sectors such as healthcare, agriculture, urban development, manufacturing, and climate resilience. The conference aims to foster collaboration, promote technological innovation, and translate research into practical applications, contributing to a more sustainable and equitable future through interdisciplinary engagement and knowledge dissemination.
+    </p>
   </div>
 </section>
 
@@ -103,15 +88,9 @@
 <section class="py-20 bg-base-100">
   <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
-      <h2 class="text-h2 font-bold text-secondary  font-montserrat">Conference Tracks</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-      </div>
-      <p class="text-body text-base-content/80md:max-w-2/3 mx-auto">
-        Explore our six comprehensive tracks, each featuring a range of topics including but not limited to
-        those listed below. Submissions on related or emerging subjects are also welcome.
-      </p>
+      <%- include('../components/section_title', { text: 'Conference Tracks' }) %>
     </div>
-    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+    <div class="grid lg:grid-cols-2  gap-8">
       <% for(let i=0; i < tracks.length; i++) { %>
       <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="card-body p-6">
@@ -122,8 +101,8 @@
                 <%= tracks[i].emoji %>
               </span>
             </div>
-            <div class="flex-1 flex flex-col justify-start">
-              <h3 class="card-title text-h5 text-secondary font-montserrat font-bold leading-tight mb-2">
+            <div class="flex-1  justify-start">
+              <h3 class="card-title text-h6 text-secondary font-montserrat font-bold leading-tight  text-left">
                 <%= tracks[i].track %>
               </h3>
             </div>
@@ -135,7 +114,7 @@
             <div class="grid gap-3">
               <% for(let j=0; j < tracks[i].topics.length; j++) { %>
               <div class="p-3 bg-base-200 rounded-lg border-l-4 border-secondary/30">
-                <p class="text-sm text-base-content/90 leading-relaxed">
+                <p class="text-sm text-base-content/90 leading-relaxed text-left">
                   <%= tracks[i].topics[j] %>
                 </p>
               </div>

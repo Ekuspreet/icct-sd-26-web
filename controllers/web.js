@@ -5,11 +5,11 @@ const pages = [
   { name: "contact", title: "Contact" },
   { name: "speakers", title: "Speakers" },
   { name: "committees", title: "Committees" },
-  { name: "gallery", title: "Gallery" },
   { name: "registration", title: "Registration" },
   { name: "submission", title: "Submission" },
   { name: "sponsorship", title: "Sponsorship" },
   { name: "awards", title: "Awards" },
+  { name: "publications", title: "Publications" },
 ];
 
 const webController = {};

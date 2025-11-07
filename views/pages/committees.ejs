@@ -1,91 +1,181 @@
 <% 
-committee = [
-{
-  title: "Patrons",
-  members: [
-    {
-      name: "Prof. (Dr.) Sehijpal Singh",
-      designation: "Principal, Guru Nanak Dev Engineering College (GNDEC), Ludhiana"
-    },
-    {
-      name: "Prof. (Dr.) Ajay Kumar Sharma",
-      designation: "Director, National Institute of Technology (NIT), Delhi"
-    }
-  ]
-},
-{
-  title: "Advisory Board Chairs",
-  members: [
-    {
-      name: "Prof. (Dr.) Harvinder Singh",
-      designation: "Professor and Dean R&D, GNDEC"
-    },
-    {
-      name: "Prof. (Dr.) Geeta Sikka",
-      designation: "Professor, Department of Computer Science & Engineering, NIT"
-    }
-  ]
-},
-{
-  title: "Chairperson",
-  members: [
-    {
-      name: "Prof. (Dr.) Kiran Jyoti",
-      designation: "Professor and Head, Department of Computer Science & Engineering, GNDEC"
-    }
-  ]
-},
-{
-  title: "Convenor",
-  members: [
-    {
-      name: "Dr. Vivek Thapar",
-      designation: "Associate Professor, Department of Computer Science and Engineering, GNDEC"
-    }
-  ]
-},
-{
-  title: "Organising Secretaries",
-  members: [
-    {
-      name: "Dr. Sita Rani",
-      designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC"
-    },
-    {
-      name: "Dr. Priyanka Arora",
-      designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC"
-    }
-  ]
-}
-]
+committee = {
+  "Patrons": {
+    members: [
+      {
+        name: "Prof. (Dr.) Sehijpal Singh",
+        designation: "Principal, Guru Nanak Dev Engineering College (GNDEC), Ludhiana"
+      },
+      {
+        name: "Prof. (Dr.) Ajay Kumar Sharma",
+        designation: "Director, National Institute of Technology (NIT), Delhi"
+      }
+    ]
+  },
+  "Advisory Board Chairs": {
+    members: [
+      {
+        name: "Dr. Harvinder Singh",
+        designation: "Professor and Dean R&D, GNDEC, Ludhiana"
+      },
+      {
+        name: "Dr. Geeta Sikka",
+        designation: "Professor, Department of Computer Science & Engineering, NIT, Delhi"
+      }
+    ]
+  },
+  "Chairperson": {
+    members: [
+      {
+        name: "Dr. Kiran Jyoti",
+        designation: "Professor and Head, Department of Computer Science & Engineering, GNDEC, Ludhiana"
+      }
+    ]
+  },
+  "Convenor": {
+    members: [
+      {
+        name: "Dr. Vivek Thapar",
+        designation: "Associate Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana"
+      }
+    ]
+  },
+  "Organising Secretaries": {
+    members: [
+      {
+        name: "Dr. Sita Rani",
+        designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana"
+      },
+      {
+        name: "Dr. Priyanka Arora",
+        designation: "Assistant Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana"
+      }
+    ]
+  },
+  "Advisory Board Members": {
+    members: [
+      {
+        name: "Dr. Ahmed A Elngar",
+        designation: "Faculty of Computers and Artificial Intelligence, Beni-Suef University, Egypt"
+      },
+      {
+        name: "Dr. Ajay Shiv Sharma",
+        designation: "The Royal Melbourne Institute of Technology, Melbourne, Australia "
+      },
+      {
+        name: "Dr. Arun Kumar Singh",
+        designation: "Professor and Head, Department of Electronics and Communication Engineering, Punjab Engineering College, Chandigarh and Chairperson- IEEE Chandigarh Subsection"
+      },
+      {
+        name: "Dr. Debhargya China",
+        designation: "Johns Hopkins University, Balmore, USA"
+      },
+      {
+        name: "Dr. Devan Becker",
+        designation: "Wilfrid Laurier University, Canada"
+      },
+      {
+        name: "Dr. Gurjit Randhawa",
+        designation: "University of Guelph, Canada"
+      },
+      {
+        name: "Dr. Hoora Fakhrmoosavy",
+        designation: "HydroOne, Ontario, Canada"
+      },
+      {
+        name: "Dr. Manoj Kumar",
+        designation: "NIT, Delhi"
+      },
+      {
+        name: "Dr. Neil Patel",
+        designation: "NYU Langone Cardiology Associates, Mineola, New York, USA"
+      },
+      {
+        name: "Dr. Obbu Chandra Sekhar",
+        designation: "NIT, Delhi"
+      },
+      {
+        name: "Dr. Pooja Devi",
+        designation: "Sr. Principal Scientist, Applied Materials and Instrumentation and Secretary- IEEE Chandigarh Subsection"
+      },
+      {
+        name: "Dr. Pradeep Rajan",
+        designation: "Center of Excellence for Farm Machinery, CSIR, Ludhiana"
+      },
+      {
+        name: "Dr. Pramod Kumar",
+        designation: "Central University of Karnataka, Kalaburagi, India"
+      },
+      {
+        name: "Dr. Rajesh Vijayvergia",
+        designation: "Post Graduate Institute of Medical Sciences and Research, Chandigarh"
+      },
+      {
+        name: "Dr. Sachin Goyal",
+        designation: "University of California, Merced"
+      },
+      {
+        name: "Ms. Suchanda Basu",
+        designation: "OpenText, Bangalore"
+      },
+      {
+        name: "Dr. Sukhjit Singh Sehra",
+        designation: "Wilfrid Laurier University, Canada"
+      },
+      {
+        name: "Dr. Sumeet Kaur Sehra",
+        designation: "Conestoga College, Canada"
+      },
+      {
+        name: "Dr. Sunint Khalsa",
+        designation: "Ericsson, Canada"
+      },
+      {
+        name: "Dr. Suresh Chandra Satapathy",
+        designation: "Kalinga Institute of Industrial Technology, Bhubaneshwar, Odisha"
+      },
+      {
+        name: "Dr. Taghreed Altamimi",
+        designation: "Alfaisal University, Riyadh, Kingdom of Saudi Arabia"
+      }
+    ]
+  }
+};
+
+// Define the sequence for rendering committees
+// Change the order in this array to control the display sequence
+committee_sequence = [
+  "Patrons",
+  "Chairperson",
+  "Advisory Board Chairs",
+  "Advisory Board Members",
+  "Convenor",
+  "Organising Secretaries",
+];
 %>
 
 <section>
   <div class="text-center mt-10">
-    <h2 class="text-h2 font-bold text-secondary  font-montserrat">Committee</h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full">
-    </div>
-
-    <p class="text-body text-base-content/80 md:max-w-3xl mx-auto p-2">
-      The ICCT-SD 2026 conference is guided by a distinguished committee of experts and academicians dedicated to fostering
-      interdisciplinary engagement and knowledge dissemination.
-    </p>
+    <%- include('../components/section_title', { text: 'Committee' }) %>
 
     <div class="divider"></div>
 
     <div class="mt-6 mb-10 px-2 md:max-w-2/4 mx-auto">
       <div class="text-left text-body flex flex-col gap-6">
-        <% for( let i = 0; i < committee.length; i++ ) { %>
+        <% for( let i = 0; i < committee_sequence.length; i++ ) { %>
+        <% const committeeTitle = committee_sequence[i]; %>
+        <% if (committee[committeeTitle]) { %>
         <div>
-          <h3 class="text-secondary font-bold text-lg mb-2"><%= committee[i].title %></h3>
+          <h3 class="text-secondary font-bold text-lg mb-2"><%= committeeTitle %></h3>
           <ul class="flex flex-col gap-2">
-            <% for( let j = 0; j < committee[i].members.length; j++ ) { %>
+            <% for( let j = 0; j < committee[committeeTitle].members.length; j++ ) { %>
             <li>
-              <b><%= committee[i].members[j].name %>,</b> <%= committee[i].members[j].designation %>
+              <b><%= committee[committeeTitle].members[j].name %>,</b> <%= committee[committeeTitle].members[j].designation %>
             </li>
             <% } %>
           </ul>
         </div>
+        <% } %>
         <% } %>
       </div>
     </div>

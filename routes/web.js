@@ -10,11 +10,11 @@ const routes = [
   { path: "/contact", handler: "contact" },
   { path: "/speakers", handler: "speakers" },
   { path: "/committees", handler: "committees" },
-  { path: "/gallery", handler: "gallery" },
   { path: "/registration", handler: "registration" },
   { path: "/submission", handler: "submission" },
   { path: "/sponsorship", handler: "sponsorship" },
   { path: "/awards", handler: "awards" },
+  { path: "/publications", handler: "publications" },
 ];
 
 routes.forEach(({ path, handler }) => {
