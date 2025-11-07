@@ -83,6 +83,7 @@ dates = [
 <span>
   <% 
   technical_partners = [
+  { src: "/images/srseg.png", alt: "SRSEG" },
   { src: "/images/ieee.png", alt: "IEEE" },
   { src: "/images/csi.png", alt: "CSI" },
   { src: "/images/cmt.png", alt: "CMT" },
@@ -183,9 +184,7 @@ dates = [
   <div class="md:max-w-2/3 mx-auto rounded-xl my-16 px-4">
     <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl overflow-hidden">
       <div class="card-body p-8 text-center">
-        <h3 class="text-h3 font-bold text-secondary font-montserrat mb-2">Conference Starts In</h3>
-        <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
-
+        <%- include('../components/section_title', {text: 'Conference Starts In'}) %>
         <div id="countdown" class="flex justify-center gap-4 md:gap-8 flex-wrap">
           <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md min-w-[100px]">
             <span id="months" class="text-h1 font-black text-secondary font-montserrat">0</span>
@@ -204,17 +203,13 @@ dates = [
             <span class="text-body font-semibold text-base-content/70 uppercase tracking-wide">Minutes</span>
           </div>
         </div>
-
-        <p class="text-small text-base-content/70 mt-6">
-          Until ICCT-SD 2026 begins on <strong>February 5, 2026</strong>
-        </p>
       </div>
     </div>
   </div>
 
   <script>
     // Set the conference date (adjust as needed)
-    const conferenceDate = new Date('2026-02-05T09:00:00').getTime();
+    const conferenceDate = new Date('2026-04-01T00:00:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -244,10 +239,10 @@ dates = [
   </script>
 </section>
 <div class="divider "></div>
-<div class="flex md:flex-row flex-col justify-center items-center ">
+<div class="flex md:flex-row flex-col justify-center items-start ">
 
   <!-- Proceedings -->
-  <div class="  md:max-w-2/4 mx-auto rounded-xl  flex-1 ">
+  <div class="   mx-auto rounded-xl  md:flex-3 ">
     <%- include('../components/section_title.ejs', {
       text: 'Proceedings'
     }) %>
@@ -263,7 +258,7 @@ dates = [
   <!-- Technical Partners -->
   <div class="divider md:divider-horizontal"></div>
 
-  <div class="  md:max-w-2/4 mx-auto  flex-1 ">
+  <div class="   mx-auto  md:flex-5 ">
     <%- include('../components/section_title.ejs', {
       text: 'Technical Partners'
     }) %>
@@ -274,8 +269,8 @@ dates = [
       </div>
       <% } %>
     </div>
-    <div class="mt-6 px-4">
-      <p class="text-small text-center text-base-content/70 leading-relaxed">
+    <div class="mt-6 px-4 ">
+      <p class="text-small  text-center text-base-content/70 leading-relaxed">
         The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
       </p>
     </div>
