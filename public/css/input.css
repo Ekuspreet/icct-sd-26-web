@@ -61,7 +61,9 @@
 :root {
   --scroll-thumb:  oklch(0.5059 0.0785 261.19); /* Your color */
 }
-
+#djfnsdjn{
+  color: oklch(50.593% 0.07866 261)
+}
 
 @layer utilities {
   @keyframes gradient-rotate {

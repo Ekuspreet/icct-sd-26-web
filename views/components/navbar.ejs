@@ -11,7 +11,7 @@
 
 
 <!-- Container flex only for md and above -->
-<div class="bg-secondary text-secondary-content md:p-4">
+<div class="bg-secondary/80  text-secondary-content md:p-4">
   <!-- Container -->
   <div class="flex justify-evenly md:hidden pt-2">
     <span>
@@ -54,9 +54,9 @@
 </div>
 
 
-<div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
+<div class="divider outline-secondary border-secondary bg-secondary/80 m-0 pt-6 pb-2 md:hidden"></div>
 
-<div id="navbar" class="flex flex-wrap bg-secondary justify-center gap-2 py-2 ">
+<div id="navbar" class="flex flex-wrap bg-secondary/80 justify-center gap-2 py-2 ">
   <% for( let index=0; index < navlinks.length; index++ ) { %>
   <%- include('navlink', { label: navlinks[index].label, url: navlinks[index].url }) %>
   <% } %>
