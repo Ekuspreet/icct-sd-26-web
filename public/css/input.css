@@ -58,6 +58,11 @@
   --font-quicksand : "Quicksand", sans-serif;
 }
 
+:root {
+  --scroll-thumb:  oklch(0.5059 0.0785 261.19); /* Your color */
+}
+
+
 @layer utilities {
   @keyframes gradient-rotate {
     0% { background-position: 0% 50%; }
@@ -119,4 +124,28 @@ html {
     transform: translate3d(85px, 0, 0);
   }
 }
+/* Only thumb visible – Chrome/Edge/Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
 
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+  background: transparent !important;      /* force transparent track */
+  border: none !important;
+}
+
+/* Thumb only */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb) !important; /* you control this color */
+  border-radius: 8px;
+  border: 2px solid transparent; /* prevents white halo */
+  background-clip: padding-box;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scroll-thumb) transparent;
+}
