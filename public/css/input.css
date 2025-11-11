@@ -17,7 +17,7 @@
   --color-accent: oklch(71% 0.143 215.221);
   --color-accent-content: oklch(100% 0 0);
   --color-neutral: oklch(37% 0.044 257.287);
-  --color-neutral-content: oklch(100% 0 0);
+  --color-neutral-content: oklch(39.026% 0.08745 243.73);
   --color-info: oklch(44% 0.11 240.79);
   --color-info-content: oklch(100% 0 0);
   --color-success: oklch(43% 0.095 166.913);
@@ -40,8 +40,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
 @theme{
---text-h1: clamp(2rem, 4vw, 3rem);
+  --text-h1: clamp(2rem, 4vw, 3rem);
 --text-h2: clamp(1.75rem, 2.25vw, 2.5rem);
 --text-h3: clamp(1.5rem, 3vw, 2rem);
 --text-h4: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -62,7 +63,7 @@
   --scroll-thumb:  oklch(0.5059 0.0785 261.19); /* Your color */
 }
 #djfnsdjn{
-  color: oklch(50.593% 0.07866 261)
+  color: oklch(39.026% 0.08745 243.73)
 }
 
 @layer utilities {

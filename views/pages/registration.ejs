@@ -1,6 +1,6 @@
 <%
 	// Registration page data (adjust values below as needed)
-  registration_intro = " To participate in the ICCT-SD-2026 conference, at least one author of each accepted paper must register and pay the applicable fee as specified below. The registration fee includes a conference kit (for offline participants only), access to all technical sessions, workshops, plenary and special sessions, as well as tea and snacks on both days. Certificates will be issued to all registered participants.";
+  registration_intro = " To participate in the ICCT-SD-2026 conference, at least one author of each accepted paper must register and pay the applicable fee as specified below. The registration fee includes a conference kit (for offline participants only), access to all technical sessions, workshops, plenary and special sessions, as well as tea and snacks on all days. Certificates will be issued to all registered participants.";
 
 	publication_note = "Only papers that are both accepted and presented will be published in the conference proceedings. Each paper is limited to 8-10 pages.";
 
@@ -41,8 +41,9 @@
     <article class="card  border border-secondary/20 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-20">
       <div class="card-body p-8">
         <div class="flex flex-col gap-2 items-center mb-4">
-          <h3 class="text-h4  font-bold text-secondary font-montserrat">Important Information</h3>
-          <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mb-6 rounded-full"></div>
+          <div class="text-center ">
+            <%- include('../components/section_title', { text: 'Important Information' }) %>
+          </div>
         </div>
         <p class="text-body text-base-content/80 mb-4 leading-relaxed"> <%= registration_intro %> </p>
 
@@ -61,8 +62,9 @@
       <div class="card-body p-8">
         <div class="flex flex-col gap-2 items-center mb-4">
 
-          <h3 class="text-h4 font-bold text-secondary font-montserrat">Registration Fees</h3>
-          <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mb-6 rounded-full"></div>
+          <div class="text-center ">
+            <%- include('../components/section_title', { text: 'Registration Fees' }) %>
+          </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-4">
@@ -83,11 +85,6 @@
           <% }) %>
         </div>
 
-        <div class="mt-6 p-4 bg-white/80 rounded-lg border border-secondary/20">
-          <p class="text-small text-base-content/70">
-            <strong>Additional Pages:</strong> Indian authors ₹1000 per extra page, International authors $15 per extra page.
-          </p>
-        </div>
       </div>
     </article>
 
@@ -98,7 +95,6 @@
 
           <h3 class="text-h3 font-bold text-secondary font-montserrat">Ready to Register?</h3>
         </div>
-        <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
 
         <p class="text-body text-base-content/80 text-center mb-8 leading-relaxed">
           Complete your registration in two simple steps: Make the payment and fill out the registration form.

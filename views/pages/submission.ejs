@@ -7,15 +7,17 @@ submission_content = [
 <% 
  // Submission Guidelines
  submission_guidelines = [
- "Peer review will be applied to every submission.",
- "Providing a uniform format for papers that appear in the conference proceedings is the aim of the conference template.",
- "The conference templates include instructions on how to write and format conference papers.",
- "It is required that authors utilize the conference manuscript templates listed below.",
- "All the submitted papers will undergo plagiarism check by Turnitin/iThenticate before undergoing review process.",
- "Papers with similarity score more than 20% will not be considered for review and rejected directly.",
- "Please make sure that before submitting your conference paper to the conference, all guidance text should be removed."
-];
-
+  "Peer review will be applied to every submission.",
+  "All the submitted papers will undergo plagiarism check by Turnitin/iThenticate before undergoing review process.",
+  "Plagiarism should be less than 15%. Otherwise the paper will not be considered for review and rejected directly.",
+  "Authors must prepare papers using the prescribed Springer conference template listed below, follow all formatting and writing guidelines, and ensure the manuscript is grammatically correct and language-checked before submission, as non-compliance may lead to rejection by Springer.",
+  "Figures and tables must be original and should not be copied from any previously published work or online source; copied content will result in rejection.",
+  "Every table and figure should be properly numbered and cited within the text.",
+  "All figures must be of high resolution.",
+  "Each paper must include an abstract of 200-250 words and 4-5 relevant keywords.",
+  "All reference numbers must be accurately cited in the manuscript body corresponding to the reference list.",
+  "Before submission, authors must ensure that all guidance or placeholder text from the template has been completely removed."
+ ];
 %>
 <% 
 // Submission Declaration
@@ -40,8 +42,9 @@ submission_declaration = "Submitting an article signifies that the work presente
 <section class="py-20 ">
   <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
-      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Submission Guidelines</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+      <div class="text-center ">
+        <%- include('../components/section_title', { text: 'Submission Guidelines' }) %>
+      </div>
 
     </div>
 
@@ -65,32 +68,32 @@ submission_declaration = "Submitting an article signifies that the work presente
 <section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
   <div class="container mx-auto px-4 md:max-w-2/3">
     <div class="text-center mb-16">
-      <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">Author Declaration</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
-    </div>
+      <div class="text-center ">
+        <%- include('../components/section_title', { text: 'Author Declaration' }) %>
+      </div>
 
-    <div class="card bg-white border border-secondary/20 shadow-xlmd:max-w-2/3 mx-auto">
-      <div class="card-body p-8">
-        <div class="flex items-start mb-6">
+      <div class="card bg-white border border-secondary/20 shadow-xlmd:max-w-2/3 mx-auto">
+        <div class="card-body p-8">
+          <div class="flex items-start mb-6">
 
-          <div>
-            <h3 class="font-bold text-secondary text-h4 mb-4 font-montserrat">
-              Terms of Submission
-            </h3>
-            <p class="text-body text-base-content/90 leading-relaxed text-justify ">
-              <%= submission_declaration %>
-            </p>
+            <div>
+              <h3 class="font-bold text-secondary text-h4 mb-4 font-montserrat">
+                Terms of Submission
+              </h3>
+              <p class="text-body text-base-content/90 leading-relaxed text-justify ">
+                <%= submission_declaration %>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="alert bg-secondary text-white mt-6">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <span class="text-sm font-semibold">Please read the declaration carefully. All submissions will be verified for originality and duplication.</span>
+          <div class="alert bg-secondary text-white mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-semibold">Please read the declaration carefully. All submissions will be verified for originality and duplication.</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 
@@ -101,10 +104,9 @@ submission_declaration = "Submitting an article signifies that the work presente
       <div class="card-body p-8">
         <!-- Header -->
         <div class="text-center mb-8">
-          <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
-            Ready to Submit?
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+          <div class="text-center ">
+            <%- include('../components/section_title', { text: 'Ready To Submit?' }) %>
+          </div>
           <p class="text-body text-base-content/80 md:max-w-2/3 mx-auto leading-relaxed">
             Make sure you have prepared your manuscript according to the guidelines and have all necessary documents ready before proceeding to the submission portal.
           </p>

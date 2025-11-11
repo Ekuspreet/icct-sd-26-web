@@ -13,71 +13,75 @@
 
 <body>
 
-  <div>
-    <!-- Container flex only for md and above -->
-    <div class="bg-secondary text-secondary-content md:p-4">
-      <!-- Container -->
-      <div class="flex justify-evenly md:hidden pt-2">
-        <span>
-          <img src="../images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
-        </span>
-        <span>
-          <img src="../images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
-        </span>
-      </div>
+  <div class="relative">
+    <img src="../images/cse.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover object-[center_top_55%]">
+    <div class="relative z-10">
 
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
 
-        <!-- Left logo -->
-        <div class="hidden md:flex justify-start md:flex-1">
-          <img src="../images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
+
+
+      <!-- Container flex only for md and above -->
+      <div class="  text-secondary-content md:p-4">
+        <!-- Container -->
+        <div class="flex justify-evenly md:hidden pt-2">
+          <span>
+            <img src="../images/college_logo.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
+          </span>
+          <span>
+            <img src="../images/nitdel.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
+          </span>
         </div>
 
-        <!-- Name: centered explicitly on md+ -->
-        <div class="text-center font-semibold text-h3  md:w-2/3 md:mt-0 mt-4 leading-tight">
-          International Conference on Intelligent Computational and Communication Technologies for Sustainable
-          Development (ICCT-SD 2026)
-          <br>
-          <span class="text-h5 font-montserrat">
-            (1<sup>st</sup> –3<sup>rd</sup> April, 2026)
-          </span>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between px-1">
 
-          <div class="text-h6 mt-1">
-            To be conducted in hybrid mode.
+          <!-- Left logo -->
+          <div class="hidden md:flex justify-start md:flex-1 ">
+            <img src="../images/college_logo.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
+          </div>
+
+          <!-- Name: centered explicitly on md+ -->
+          <div class="text-center font-semibold text-h3  md:w-2/3 md:mt-0 mt-4 leading-tight flex flex-col items-center ">
+            <span class="text-h5 ">International Conference</span> <span class="text-h6">on</span> Intelligent Computational and Communication Technologies for Sustainable
+            Development (ICCT-SD 2026)
+            <br>
+            <span class="text-h5 font-montserrat">
+              1<sup>st</sup> –3<sup>rd</sup> April, 2026
+            </span>
+
+            <div class="text-h6 mt-1">
+              (Hybrid Mode)
+            </div>
+          </div>
+
+          <!-- Right logo -->
+          <div class="hidden md:flex justify-end md:flex-1">
+            <img src="../images/nitdel.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
           </div>
         </div>
 
-        <!-- Right logo -->
-        <div class="hidden md:flex justify-end md:flex-1">
-          <img src="../images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
-        </div>
+        <!-- Small screen layout adjustment: two logos top row, name bottom row -->
+
       </div>
 
-      <!-- Small screen layout adjustment: two logos top row, name bottom row -->
-
     </div>
-    <div class="divider outline-secondary border-secondary bg-secondary m-0 pt-6 pb-2 md:hidden"></div>
+    <div class="relative z-10">
+      <div class="wave-header relative  pt-4">
+        <svg class="waves absolute bottom-0 left-0 w-full h-16 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fafafa" />
+          </g>
 
-  </div>
-  <div>
+        </svg>
 
-    <div class="wave-header relative bg-secondary ">
-      <svg class="waves absolute bottom-0 left-0 w-full h-12 md:h-20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fafafa" />
-        </g>
-
-      </svg>
-
+      </div>
     </div>
   </div>
-
 
   <!-- Quick Links Section -->
   <section class="py-20 bg-base-100 ">
@@ -114,9 +118,8 @@
     <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
       <div class="text-center md:text-left md:flex-2">
         <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
-          <img src="../images/college_logo.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
-          <img src="../images/nitdel.png" alt="" class="h-28 object-contain bg-white rounded-full p-1" />
-
+          <img src="../images/college_logo.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
+          <img src="../images/nitdel.png" alt="" class="h-28 lg:h-40 aspect-square object-contain bg-white rounded-full p-1" />
         </div>
 
         <h3 class="text-h2 font-black font-montserrat mb-4">
@@ -176,12 +179,11 @@
       <div class="container mx-auto px-4 text-center">
         <p class="text-small opacity-80">
           © Copyright
-          <span id="date"></span>, GNDEC, NIT. All rights reserved.
+          <span id="date"></span> , GNDEC, NIT. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
-
 
   <script>
     // Set the current year in the footer

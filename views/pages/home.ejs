@@ -83,7 +83,7 @@ dates = [
 <span>
   <% 
   technical_partners = [
-  { src: "/images/srseg.png", alt: "SRSEG" },
+  { src: "/images/srseg.png", alt: "SIRG" },
   { src: "/images/ieee.png", alt: "IEEE" },
   { src: "/images/csi.png", alt: "CSI" },
   { src: "/images/cmt.png", alt: "CMT" },
@@ -162,8 +162,9 @@ dates = [
   <div class="divider"></div>
 
   <div class="  md:md:max-w-2/3 mx-auto rounded-xl my-10 ">
-    <h3 class="text-h2 font-semibold text-secondary font-montserrat  text-center">Important Dates</h3>
-    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-secondary/40 mx-auto mb-6 rounded-full"></div>
+    <div class="text-center ">
+      <%- include('../components/section_title', { text: 'Important Dates' }) %>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 md:p-0">
       <% for( let i=0; i < dates.length; ++i ) { %>
       <div class="timeline-item  p-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg">
@@ -204,6 +205,10 @@ dates = [
             <span id="minutes" class="text-h1 font-black font-montserrat ">0</span>
             <span class="text-body font-semibold text-base-content/70 uppercase tracking-wide">Minutes</span>
           </div>
+          <div class="flex flex-col items-center text-secondary p-4 bg-white rounded-lg shadow-md min-w-[100px]">
+            <span id="seconds" class="text-h1 font-black font-montserrat ">0</span>
+            <span class="text-body font-semibold text-base-content/70 uppercase tracking-wide">Seconds</span>
+          </div>
         </div>
       </div>
     </div>
@@ -211,7 +216,7 @@ dates = [
 
   <script>
     // Set the conference date (adjust as needed)
-    const conferenceDate = new Date('2026-04-01T00:00:00').getTime();
+    const conferenceDate = new Date('2026-04-01T09:00:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -227,17 +232,19 @@ dates = [
       const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Update the countdown display
       document.getElementById('months').textContent = months;
       document.getElementById('days').textContent = days;
       document.getElementById('hours').textContent = hours;
       document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
     }
 
     // Update countdown immediately and then every minute
     updateCountdown();
-    setInterval(updateCountdown, 60000);
+    setInterval(updateCountdown, 1000);
   </script>
 </section>
 <div class="divider "></div>
@@ -266,7 +273,7 @@ dates = [
     }) %>
     <div class="flex justify-center items-center md:flex-row flex-col gap-4 ">
       <% for( let i=0; i < technical_partners.length; ++i ) { %>
-      <div class="timeline-item aspect-square <%= technical_partners[i].alt == "IEEE"? "w-64 h-40" : "w-40 h-40" %> rounded-xl  overflow-hidden border-base-300 bg-white flex items-center justify-center p-2">
+      <div class="timeline-item aspect-square <%= technical_partners[i].alt == "IEEE" || technical_partners[i].alt == "SIRG"? "w-64 h-40" : "w-40 h-40" %> rounded-xl  overflow-hidden border-base-300 bg-white flex items-center justify-center p-2">
         <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="object-contain w-full h-full" />
       </div>
       <% } %>

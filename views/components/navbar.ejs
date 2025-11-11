@@ -11,7 +11,7 @@
 
 
 <!-- Container flex only for md and above -->
-<div class="bg-secondary/80  text-secondary-content md:p-4">
+<div class="  text-secondary-content md:p-4">
   <!-- Container -->
   <div class="flex justify-evenly md:hidden pt-2">
     <span>
@@ -22,10 +22,10 @@
     </span>
   </div>
 
-  <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between px-1">
 
     <!-- Left logo -->
-    <div class="hidden md:flex justify-start md:flex-1">
+    <div class="hidden md:flex justify-start md:flex-1 ">
       <%- include('logo', { source: '/images/college_logo.png' }) %>
     </div>
 
@@ -54,9 +54,8 @@
 </div>
 
 
-<div class="divider outline-secondary border-secondary bg-secondary/80 m-0 pt-6 pb-2 md:hidden"></div>
 
-<div id="navbar" class="flex flex-wrap bg-secondary/80 justify-center gap-2 py-2 ">
+<div id="navbar" class="flex flex-wrap  justify-center gap-2 pt-6 pb-2  ">
   <% for( let index=0; index < navlinks.length; index++ ) { %>
   <%- include('navlink', { label: navlinks[index].label, url: navlinks[index].url }) %>
   <% } %>

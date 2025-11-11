@@ -14,11 +14,12 @@
 </head>
 
 <body class="font-[weight:500] text-justify">
-  <div class="bg-[url('/images/cse.jpg')] bg-[center_top_55%] bg-cover">
-    <div>
+  <div class="relative">
+    <img src="/images/cse.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover object-[center_top_55%]">
+    <div class="relative z-10">
       <%- include('components/navbar') %>
     </div>
-    <div>
+    <div class="relative z-10">
       <%- include('components/waves') %>
     </div>
   </div>
