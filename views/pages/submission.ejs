@@ -24,6 +24,17 @@ submission_content = [
 submission_declaration = "Submitting an article signifies that the work presented has not been previously published (except as an abstract, a published lecture, or an academic thesis), is not currently under review by any other publication, has been approved for submission by all authors and, where applicable, by the relevant institutional authorities, and that, upon acceptance, it will not be published elsewhere in the same form, in English or any other language, whether in print or electronic format, without the written consent of the copyright holder. To ensure adherence to these conditions, the article may be subject to verification using originality or duplication detection software.";
 %>
 
+<% 
+microsoft_crt_submission_rules = [
+  "Register on the conference's online submission system i.e. Microsoft CMT.",
+  "Paper format should be PDF only.",
+  "Remove author names, affiliations, acknowledgements, and self-citations that reveal identity for double-blind review process.",
+  "Submit the anonymized PDF file according to the instructions.",
+  "Enter the title, abstract, keywords, author details (only in metadata, not in the manuscript)",
+  "Choose relevant conference tracks and subjects.",
+  "Verify submission completeness and receive confirmation email."
+];
+%>
 
 <section class="pt-10 mx-auto px-4 md:max-w-2/3">
   <div class="text-center ">
@@ -149,6 +160,14 @@ submission_declaration = "Submitting an article signifies that the work presente
           <p class="text-body text-base-content/80 leading-relaxed mb-3">
             The Microsoft Conference Management Toolkit (CMT) service is utilized to manage the peer-review process for this conference. The service is provided free of charge by Microsoft, which covers all associated expenses, including those related to Azure cloud services, software development, and technical support.
           </p>
+          <h4 class="font-semibold text-secondary mb-3 text-body">Submission Guidelines for Microsoft CMT and Peer review process</h4>
+          <% for( let index = 0; index < microsoft_crt_submission_rules.length; index++ ) { %>
+
+          <p class="text-body text-base-content/80 leading-relaxed mb-3">
+            <%= index+1 %>. <%= microsoft_crt_submission_rules[index] %>
+          </p>
+          <% } %>
+          </>
           <div class="flex items-center gap-2 mt-4 p-3 bg-base-100 rounded-lg">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
