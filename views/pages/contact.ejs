@@ -22,7 +22,7 @@
           email: "amandeepk@nitdelhi.ac.in"
         },
         {
-          name : "Dr. Sahil Neelam",
+          name : "Dr. Sahil",
           designation : "Assistant Professor, Department of Computer Science and Engineering, NIT Delhi",
           email: "sahil.neelam@nitdelhi.ac.in"
         }
@@ -61,37 +61,37 @@
 
     <!-- Organising Secretaries -->
     <% conference_details.organising_secretary.forEach(function(secretary){ %>
-      <div class="bg-white p-6 rounded-lg shadow-md border border-secondary/30">
-        <h2 class="text-h3 font-semibold text-secondary font-montserrat mb-4">Organising Secretary</h2>
+    <div class="bg-white p-6 rounded-lg shadow-md border border-secondary/30">
+      <h2 class="text-h3 font-semibold text-secondary font-montserrat mb-4">Organising Secretary</h2>
 
-        <p class="font-semibold text-base-content/90">
-          <strong>Name:</strong> <%= secretary.name %>
-        </p>
+      <p class="font-semibold text-base-content/90">
+        <strong>Name:</strong> <%= secretary.name %>
+      </p>
 
-        <p class="text-base-content/80">
-          <strong>Designation:</strong> <%= secretary.designation %>
-        </p>
+      <p class="text-base-content/80">
+        <strong>Designation:</strong> <%= secretary.designation %>
+      </p>
 
-        <% if (secretary.phone) { %>
-          <p class="text-base-content/80">
-            <strong>Phone:</strong>
-            <a href="tel:<%= secretary.phone %>" class="link link-secondary">
-              <%= secretary.phone %>
-            </a>
-          </p>
-        <% } %>
+      <% if (secretary.phone) { %>
+      <p class="text-base-content/80">
+        <strong>Phone:</strong>
+        <a href="tel:<%= secretary.phone %>" class="link link-secondary">
+          <%= secretary.phone %>
+        </a>
+      </p>
+      <% } %>
 
-        <% if (secretary.email) { %>
-          <p class="text-base-content/80">
-            <strong>Email:</strong>
-            <a href="mailto:<%= secretary.email %>" class="link link-secondary">
-              <%= secretary.email %>
-            </a>
-          </p>
-        <% } %>
+      <% if (secretary.email) { %>
+      <p class="text-base-content/80">
+        <strong>Email:</strong>
+        <a href="mailto:<%= secretary.email %>" class="link link-secondary">
+          <%= secretary.email %>
+        </a>
+      </p>
+      <% } %>
 
-      </div>
-      <% }) %>
+    </div>
+    <% }) %>
 
 
   </div>
