@@ -3,30 +3,30 @@
   <%
 dates = [
   {
-    date: 'extended upto <span class="text-error font-bold">25-01-2026</span>',
+    date: 'hard deadline <span class="text-error font-bold">09-02-2026</span>',
     event: 'Submission of Full Paper',
     calendar_link:
-      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Submission+of+Full+Paper&dates=20260125/20260126&details=Submit+your+full+paper+for+ICCT-SD+2026&sf=true&output=xml'
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Submission+of+Full+Paper&dates=20260209/20260210&details=Submit+your+full+paper+for+ICCT-SD+2026&sf=true&output=xml'
   },
   {
-    date: 'upto 05-02-2026',
+    date: 'upto 16-02-2026',
     event: 'Acceptance Notification',
     calendar_link:
-      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Acceptance+Notification&dates=20260205/20260206&details=Check+notification+of+acceptance+for+ICCT-SD+2026&sf=true&output=xml'
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Acceptance+Notification&dates=20260216/20260217&details=Check+notification+of+acceptance+for+ICCT-SD+2026&sf=true&output=xml'
   },
   {
-    date: '15-02-2026',
+    date: '18-02-2026',
     event: 'Registration Deadline',
     calendar_link:
-      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Registration+Deadline&dates=20260215/20260216&details=Register+for+ICCT-SD+2026&sf=true&output=xml'
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Registration+Deadline&dates=20260218/20260219&details=Register+for+ICCT-SD+2026&sf=true&output=xml'
   },
   {
-    date: '20-02-2026',
+    date: '21-02-2026',
     event: 'Camera Ready Paper',
     calendar_link:
-      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Camera+Ready+Paper&dates=20260220/20260221&details=Submit+camera+ready+paper+for+ICCT-SD+2026&sf=true&output=xml'
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Camera+Ready+Paper&dates=20260221/20260222&details=Submit+camera+ready+paper+for+ICCT-SD+2026&sf=true&output=xml'
   }
-];
+]
 %>
 
 </span>
@@ -57,7 +57,7 @@ dates = [
 
 <span>
 
-  <% 
+  <%
   hotels_nearby = [
 {
       name: "Radisson Blu Hotel",
@@ -76,12 +76,12 @@ dates = [
 </span>
 
 <span>
-  <% proceedings=[ { src : "/images/springer.jpeg" , alt : "Springer" }, { src: "/images/scopus.jpg" , alt: "Scopus" }
-        ] %>
+  <% proceedings=[ { src : "/images/springer.jpeg" , alt : "Springer" }, { src: "/images/scopus.jpg" , alt: "Scopus" },
+    { src : "/images/crc.png" , alt : "CRC Press" }, { src: "/images/tech_science.png" , alt: "Tech Science" }        ] %>
 </span>
 
 <span>
-  <% 
+  <%
   technical_partners = [
   { src: "/images/csir.png", alt: "CSIR" },
   { src: "/images/srseg.png", alt: "SIRG" },
@@ -94,7 +94,7 @@ dates = [
 </span>
 
 <span>
-  <% 
+  <%
     how_to_reach = [
       {
         mode: "By Air",
@@ -254,13 +254,12 @@ dates = [
   <!-- Proceedings -->
   <div class="   mx-auto rounded-xl  md:flex-3 ">
     <%- include('../components/section_title.ejs', {
-      text: 'Proceedings'
+      text: 'Publication and Indexing '
     }) %>
     <div class="flex justify-center md:flex-row flex-col gap-4 ">
       <% for( let i=0; i < proceedings.length; ++i ) { %>
-      <div class="timeline-item aspect-square h-40 rounded-xl  overflow-hidden border-base-300 bg-white  ">
+      <div class="timeline-item aspect-square h-40 overflow-hidden border-base-300 bg-white  ">
         <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
-        <h6 class="text-caption text-center mt-2"> Approval Awaited</h6>
       </div>
       <% } %>
     </div>
