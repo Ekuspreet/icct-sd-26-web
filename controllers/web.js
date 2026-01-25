@@ -10,6 +10,7 @@ const pages = [
   { name: "sponsorship", title: "Sponsorship" },
   { name: "awards", title: "Awards" },
   { name: "publications", title: "Publications" },
+  { name: "poster_presentation", title: "Poster Presentation", page: "poster" },
 ];
 
 const webController = {};

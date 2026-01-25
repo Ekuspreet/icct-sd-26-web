@@ -1,0 +1,47 @@
+<% 
+ submissionGuidelines = [
+  "Submit a 300-word proposal in DOCX or PDF format covering the essence of the work (references, tables, and figures do not count toward this limit).",
+  "Submissions undergo a single-blind peer-review process where author details are shared with reviewers.",
+  "Accepted authors must submit an extended abstract (4-11 pages) in both an editable format (LaTeX or Word) and PDF by 8th Feb 2026.",
+  "All posters and presentations must be in English.",
+  "Physical posters must be prepared in standard A0 vertical size (841 mm x 1189 mm).",
+  "A maximum of 4 authors are allowed per presentation (including the guide).",
+  "Presentations should describe topics using a mix of text, graphics, photographs, and illustrations.",
+  "In-person presenters must bring their own printed poster for display; no on-site printing services are provided."
+];
+%>
+
+
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center ">
+    <%- include('../components/section_title', { text: 'Poster Presentation*' }) %>
+  </div>
+  <div class="grid gap-4 mx-auto mb-10">
+    <% for(let i = 0; i < submissionGuidelines.length; i++) { %>
+    <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30 shadow-sm flex  items-center ">
+      <span class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+        <span class="text-secondary font-bold text-sm"><%= i + 1 %></span>
+      </span>
+      <p class="text-body font-medium text-base-content/90 leading-relaxed flex-1 ">
+        <%= submissionGuidelines[i] %>
+      </p>
+    </div>
+    <% } %>
+  </div>
+
+
+  <p class="text-body font-medium text-base-content/90 leading-relaxed flex-1 ">
+    *The Guidelines mentioned above are subject to change.
+  </p>
+  <div class="divider"></div>
+
+
+  <div class="my-16 text-center bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-12 border border-secondary/20">
+    <h3 class="text-h3 font-bold text-secondary font-montserrat mb-4">
+      Poster Presentation Submission Portal
+    </h3>
+    <a href="#" class="btn  btn-disabled btn-lg ">
+      Coming Soon
+    </a>
+  </div>
+</section>
