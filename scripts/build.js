@@ -17,6 +17,7 @@ const pages = [
   { name: "sponsorship", path: "sponsorship.html" },
   { name: "awards", path: "awards.html" },
   { name: "publications", path: "publications.html" },
+  { name: "poster", path: "poster.html" },
 ];
 
 // Ensure build directory exists
