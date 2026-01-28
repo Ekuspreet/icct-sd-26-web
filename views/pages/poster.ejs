@@ -1,20 +1,20 @@
-<% 
- submissionGuidelines = [
-  "Submit a 300-word proposal in DOCX or PDF format covering the essence of the work (references, tables, and figures do not count toward this limit).",
+<%
+submissionGuidelines = [
+  "Submit a 300-word abstract in DOCX or PDF format covering the essence of the work through email (icctsd26@gmail.com).",
   "Submissions undergo a single-blind peer-review process where author details are shared with reviewers.",
-  "Accepted authors must submit an extended abstract (4-11 pages) in both an editable format (LaTeX or Word) and PDF by 8th Feb 2026.",
+  "Accepted authors must complete the payment and register using the registration link by 8th Feb 2026.",
   "All posters and presentations must be in English.",
-  "Physical posters must be prepared in standard A0 vertical size (841 mm x 1189 mm).",
+  "Physical posters must be prepared in standard A0 vertical size (841mm × 1189mm) on matte paper.",
+  "Presenters must bring their own printed poster for display; no on-site printing services are provided.",
   "A maximum of 4 authors are allowed per presentation (including the guide).",
-  "Presentations should describe topics using a mix of text, graphics, photographs, and illustrations.",
-  "In-person presenters must bring their own printed poster for display; no on-site printing services are provided."
+  "Presentations should describe topics using a mix of text, graphics, photographs, and illustrations."
 ];
 %>
 
 
 <section class="pt-10 mx-auto px-4 md:max-w-2/3">
   <div class="text-center ">
-    <%- include('../components/section_title', { text: 'Poster Presentation*' }) %>
+    <%- include('../components/section_title', { text: 'Poster Presentation' }) %>
   </div>
   <div class="grid gap-4 mx-auto mb-10">
     <% for(let i = 0; i < submissionGuidelines.length; i++) { %>
@@ -29,19 +29,20 @@
     <% } %>
   </div>
 
-
-  <p class="text-body font-medium text-base-content/90 leading-relaxed flex-1 ">
-    *The Guidelines mentioned above are subject to change.
-  </p>
   <div class="divider"></div>
 
 
   <div class="my-16 text-center bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-12 border border-secondary/20">
     <h3 class="text-h3 font-bold text-secondary font-montserrat mb-4">
-      Poster Presentation Submission Portal
+      Poster Presentation Registration Portal
     </h3>
-    <a href="#" class="btn  btn-disabled btn-lg ">
-      Coming Soon
+    <p class="text-body text-base-content/80 mb-8 md:max-w-2/3 mx-auto leading-relaxed">
+      Please download the sample poster for reference before preparing your submission by clicking <a class= "link link-secondary" href = "/images/sample_poster.png">here</a>.
+    </p>
+    <div>
+        <a href="https://forms.gle/a9jYGkTUYfWzCLMDA" onclick="window.open(this.href, '_blank', 'width=900,height=700'); return false;" rel="noopener noreferrer" class="btn btn-lg btn-secondary ">
+      Registration Link
     </a>
+    </div>
   </div>
 </section>
