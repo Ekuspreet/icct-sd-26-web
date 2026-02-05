@@ -11,6 +11,7 @@ const nav_id_map = {
   contact: "contact-us",
   publications: "publications",
   poster: "poster-presentation",
+  accomodation: "accomodation",
 };
 var current_path = window.location.pathname.split("/").pop();
 current_path = current_path.replace(".html", "");
@@ -20,6 +21,6 @@ if (nav_element) {
     "border-white",
     "border-2",
     "font-black",
-    "hover:border-white"
+    "hover:border-white",
   );
 }

@@ -11,6 +11,7 @@ const pages = [
   { name: "awards", title: "Awards" },
   { name: "publications", title: "Publications" },
   { name: "poster_presentation", title: "Poster Presentation", page: "poster" },
+  { name: "accomodation", title: "Accomodation" },
 ];
 
 const webController = {};

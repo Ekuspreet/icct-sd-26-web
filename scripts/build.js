@@ -18,6 +18,7 @@ const pages = [
   { name: "awards", path: "awards.html" },
   { name: "publications", path: "publications.html" },
   { name: "poster", path: "poster.html" },
+  { name: "accomodation", path: "accomodation.html" },
 ];
 
 // Ensure build directory exists
@@ -41,7 +42,7 @@ for (const page of pages) {
     {
       filename: src, // required for resolving relative includes
       root: path.resolve(VIEWS_DIR),
-    }
+    },
   );
   html = html.replace(/href="\/([^"]*)/g, 'href="./$1');
   html = html.replace(/src="\/(css|js|images)\//g, 'src="./$1/');
