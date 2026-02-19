@@ -142,7 +142,7 @@ contact_info = [
   <div class="container mx-auto px-4 md:max-w-2/4">
     <div class="flex flex-wrap justify-center gap-6">
       <% for(let i = 0; i < benefits_highlights.length; i++) { %>
-      <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 text-center shadow-md hover:shadow-md transition-shadow duration-300">
         <div class="card-body p-6">
           <div class="text-4xl "><%= benefits_highlights[i].icon %></div>
           <h3 class="font-bold text-secondary text-h3 mb-2"><%= benefits_highlights[i].value %></h3>
@@ -166,7 +166,7 @@ contact_info = [
 
     <div class="grid lg:grid-cols-2 gap-8">
       <% for(let i = 0; i < partnership_tiers.length; i++) { %>
-      <div class="card bg-gradient-to-br <%= partnership_tiers[i].color %> border <%= partnership_tiers[i].borderColor %> shadow-lg hover:shadow-2xl transition-all duration-300 <%= partnership_tiers[i].featured ? 'ring-2 ring-secondary/50' : '' %>">
+      <div class="card bg-gradient-to-br <%= partnership_tiers[i].color %> border <%= partnership_tiers[i].borderColor %> shadow-md hover:shadow-2xl transition-all duration-300 <%= partnership_tiers[i].featured ? 'ring-2 ring-secondary/50' : '' %>">
         <div class="card-body p-8">
           <!-- Tier Header -->
           <div class="flex items-center justify-between mb-6">
@@ -232,7 +232,7 @@ contact_info = [
 <!-- Contact Section -->
 <section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
   <div class="container mx-auto px-4md:max-w-2/3">
-    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-md">
       <div class="card-body p-8 text-center">
         <div class="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
           <span class="text-5xl">📧</span>

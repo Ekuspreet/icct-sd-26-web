@@ -52,7 +52,7 @@ awards = [
 
     <div class="flex flex-wrap flex-col xl:flex-row gap-8">
       <% for(let i = 0; i < awards.length; i++) { %>
-      <div class="card flex-1 bg-gradient-to-br <%= awards[i].color %> border <%= awards[i].borderColor %> shadow-lg hover:shadow-2xl transition-all duration-300 <%= awards[i].featured ? 'ring-2 ring-secondary/50' : '' %>">
+      <div class="card flex-1 bg-gradient-to-br <%= awards[i].color %> border <%= awards[i].borderColor %> shadow-md hover:shadow-2xl transition-all duration-300 <%= awards[i].featured ? 'ring-2 ring-secondary/50' : '' %>">
         <div class="card-body ">
           <!-- Award Header -->
           <div class=" xl:min-h-36 flex items-center justify-center">

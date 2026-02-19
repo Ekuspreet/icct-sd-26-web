@@ -125,7 +125,7 @@
   <div class="container mx-auto px-4 md:max-w-6xl">
     <div class="grid grid-cols-1 gap-8">
       <% speakers.forEach(function(s, idx){ %>
-      <article class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+      <article class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group">
         <!-- Decorative elements -->
         <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary via-secondary/60 to-secondary/40"></div>
         <div class="pointer-events-none absolute -right-20 -top-20 w-60 h-60 rounded-full bg-gradient-to-br from-secondary/10 to-secondary/5 opacity-60 blur-3xl group-hover:opacity-80 transition-opacity duration-300"></div>
@@ -136,10 +136,10 @@
             <div class="flex-shrink-0 relative">
               <div class="relative">
                 <% if (s.image) { %>
-                <img src="<%= s.image %>" alt="<%= s.name %>" class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300 mx-auto" />
+                <img src="<%= s.image %>" alt="<%= s.name %>" class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300 mx-auto" />
                 <% } else { %>
                 <% var initials = (s.name||'').split(' ').map(function(n){ return n.charAt(0); }).slice(0,2).join('').toUpperCase(); %>
-                <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center text-white text-5xl font-bold border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300 mx-auto">
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center text-white text-5xl font-bold border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300 mx-auto">
                   <%= initials %>
                 </div>
                 <% } %>
@@ -209,7 +209,7 @@
 <!-- Call to Action -->
 <section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
   <div class="container mx-auto px-4 md:max-w-2/3">
-    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-md">
       <div class="card-body p-12 text-center">
 
         <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">

@@ -187,7 +187,7 @@ dates = [
 
   <!-- Countdown Section -->
   <div class="md:max-w-2/3 mx-auto rounded-xl my-16 ">
-    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-xl overflow-hidden">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-md overflow-hidden">
       <div class="card-body py-8 text-center">
         <%- include('../components/section_title', {text: 'Conference Starts In'}) %>
         <div id="countdown" class="flex justify-center gap-4 md:gap-8 flex-wrap">
@@ -378,7 +378,7 @@ dates = [
         <h2 class="text-h5 font-bold text-secondary mb-6">Hotels Nearby</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <% for( let index=0; index < hotels_nearby.length; index++ ) { %>
-          <a href="<%= hotels_nearby[index].link %>" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-3 p-6 rounded-lg bg-white border-2 border-secondary/30 hover:border-secondary hover:shadow-lg transition-all duration-300 group">
+          <a href="<%= hotels_nearby[index].link %>" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-3 p-6 rounded-lg bg-white border-2 border-secondary/30 hover:border-secondary hover:shadow-md transition-all duration-300 group">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-secondary group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
