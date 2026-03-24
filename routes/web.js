@@ -17,6 +17,7 @@ const routes = [
   { path: "/publications", handler: "publications" },
   { path: "/poster", handler: "poster_presentation" },
   { path: "/accomodation", handler: "accomodation" },
+  { path: "/paper", handler: "paper_presentation" }
 ];
 
 routes.forEach(({ path, handler }) => {

@@ -1,0 +1,45 @@
+<%
+presentationGuidelines = [
+"The time limit of presentation is 10 minutes including 2 minutes Q&A.",
+"The presentation format must be followed.",
+"The presentation file size must not exceed 5 MB.",
+"The presentation must be prepared in PowerPoint and submitted before 28th March, 2026 through icctsd2026.papers@gmail.com, file named as SessionID_PaperID.pptx",
+"The presenter must arrive/join 10 minutes before the beginning of respective session to check the presentation setup and avoid technical issues.",
+"Ensure that all visuals and images used in presentation are of high quality.",
+"In online session the participants must rename themselves in the format: SESSIONID_PAPERID_NAME (Example: S1_102_Rahul Kumar)"
+];
+
+%>
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center ">
+    <%- include('../components/section_title', { text: 'Guidelines for Paper Presentation' }) %>
+  </div>
+  <div class="grid gap-4 mx-auto mb-10">
+    <% for(let i = 0; i < presentationGuidelines.length; i++) { %>
+    <div class="p-4 bg-base-200 rounded-lg border-l-4 border-secondary/30 shadow-sm flex  items-center ">
+      <span class="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+        <span class="text-secondary font-bold text-sm"><%= i + 1 %></span>
+      </span>
+      <p class="text-body font-medium text-base-content/90 leading-relaxed flex-1 ">
+        <%= presentationGuidelines[i] %>
+      </p>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <div class="my-16 text-center bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-12 border border-secondary/20">
+    <h3 class="text-h3 font-bold text-secondary font-montserrat ">
+      ICCT-SD 2026 Presentation Template
+    </h3>
+    <p class="text-body ">Kindly download the template file below to prepare your presentation:</p>
+
+    <div class="mt-4">
+      <a href="/ICCT-SD 2026 Presentation Template[SessionID-PaperID].pptx" download class="btn btn-lg btn-secondary">
+        Download Template
+      </a>
+    </div>
+  </div>
+</section>

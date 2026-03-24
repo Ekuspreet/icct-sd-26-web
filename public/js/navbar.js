@@ -12,6 +12,7 @@ const nav_id_map = {
   publications: "publications",
   poster: "poster-presentation",
   accomodation: "accomodation",
+  paper: "paper-presentation"
 };
 var current_path = window.location.pathname.split("/").pop();
 current_path = current_path.replace(".html", "");
