@@ -1,7 +1,17 @@
-<a class="btn md:btn-lg btn-sm btn-secondary  border-secondary-content/90 hover:border-secondary-content/60" id="<%= label.toLowerCase().replace(/\s+/g, '-') %>" href="<%= url %><% if (static) { %>
-<% if (url !== "/") { %>
-.html
-<% } %>
-<% } %>">
+<%
+var isNew = ["Paper Presentation"].includes(label);
+
+%>
+
+<a id="<%= label.toLowerCase().replace(/\s+/g, '-') %>" href="<%= url %><% if (static) { %><% if (url !== "/") { %>.html<% } %><% } %>" class="relative btn md:btn-lg btn-sm  border-secondary-content/90 hover:border-secondary-content/60 <%= isNew
+    ? 'btn-accent text-white  '
+    : 'btn-secondary ' %>">
+  <% if (isNew) { %>
+  <span class="absolute -top-2 -right-2 z-10 text-[8px] md:text-[10px] bg-secondary-content text-accent font-bold rounded-full px-1.5 py-0.5 leading-none">
+    NEW
+  </span>
+  <% } %>
+
+  <i class="icon-name mr-1"></i>
   <%= (label == "Committee") ? "Committees" : label %>
 </a>
