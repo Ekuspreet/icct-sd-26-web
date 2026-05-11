@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 icct-sd-26-web-static/
 
 public/gallery/
+
+public/images/
+
