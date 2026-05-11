@@ -1,0 +1,202 @@
+<%
+const galleries = [
+  { label: "Day 1 Images", count: 80, path: "gallery/1/" },
+  { label: "Day 2 Images", count: 40, path: "gallery/2/" },
+  { label: "Day 3 Images", count: 59, path: "gallery/3/" },
+];
+%>
+
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center">
+    <%- include('../components/section_title', { text: 'Gallery' }) %>
+  </div>
+</section>
+
+<section class="mb-4 p-4">
+  <div id="gallery-root" class="tabs tabs-lift" data-galleries='<%- JSON.stringify(galleries) %>'>
+    <% galleries.forEach((gallery, index) => { %>
+    <input type="radio" name="gallery" class="tab gallery-tab" aria-label="<%= gallery.label %>" data-index="<%= index %>" <%= index === 0 ? 'checked="checked"' : '' %> />
+
+    <div class="tab-content bg-base-100 border-base-300 p-4 sm:p-6">
+      <div class="gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" data-index="<%= index %>"></div>
+
+      <p class="text-center text-body text-gray-600">
+        Click on an image to view it in full size. Use the navigation buttons below to browse through the gallery.
+      </p>
+      <div class="flex items-center justify-center gap-3 mt-5">
+        <button class="btn btn-sm gallery-prev" data-index="<%= index %>">
+          Previous
+        </button>
+
+        <span class="gallery-page text-sm opacity-70" data-index="<%= index %>"></span>
+
+        <button class="btn btn-sm gallery-next" data-index="<%= index %>">
+          Next
+        </button>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-black/90 p-4 items-center justify-center">
+  <button id="gallery-close" type="button" class="absolute top-4 right-4 btn btn-circle btn-ghost text-white text-3xl" aria-label="Close image">
+    &times;
+  </button>
+
+  <img id="gallery-lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-lg" />
+</div>
+
+<script>
+  (() => {
+    const root = document.getElementById("gallery-root");
+    if (!root) return;
+
+    const galleries = JSON.parse(root.dataset.galleries);
+    const PAGE_SIZE = 8;
+
+    const pages = galleries.map(() => 0);
+
+    const lightbox = document.getElementById("gallery-lightbox");
+    const lightboxImg = document.getElementById("gallery-lightbox-img");
+    const closeBtn = document.getElementById("gallery-close");
+
+    function getGrid(index) {
+      return root.querySelector(`.gallery-grid[data-index="${index}"]`);
+    }
+
+    function getPageLabel(index) {
+      return root.querySelector(`.gallery-page[data-index="${index}"]`);
+    }
+
+    function getPrevButton(index) {
+      return root.querySelector(`.gallery-prev[data-index="${index}"]`);
+    }
+
+    function getNextButton(index) {
+      return root.querySelector(`.gallery-next[data-index="${index}"]`);
+    }
+
+    function renderPage(index) {
+      const gallery = galleries[index];
+      const grid = getGrid(index);
+      const pageLabel = getPageLabel(index);
+      const prevButton = getPrevButton(index);
+      const nextButton = getNextButton(index);
+
+      const totalPages = Math.ceil(gallery.count / PAGE_SIZE);
+      const currentPage = pages[index];
+
+      const start = currentPage * PAGE_SIZE + 1;
+      const end = Math.min(start + PAGE_SIZE - 1, gallery.count);
+
+      grid.innerHTML = "";
+
+      const fragment = document.createDocumentFragment();
+
+      for (let i = start; i <= end; i++) {
+        const src = `${gallery.path}${i}.webp`;
+        const alt = `${gallery.label} ${i}`;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "gallery-item relative aspect-[4/3] overflow-hidden rounded-lg bg-base-200";
+        button.dataset.src = src;
+        button.dataset.alt = alt;
+
+        button.innerHTML = `
+          <div class="skeleton absolute inset-0 rounded-lg"></div>
+          <img
+            src="${src}"
+            alt="${alt}"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 h-full w-full object-cover object-top opacity-0"
+          />
+        `;
+
+        const img = button.querySelector("img");
+        const skeleton = button.querySelector(".skeleton");
+
+        img.onload = () => {
+          skeleton?.remove();
+          img.classList.remove("opacity-0");
+        };
+
+        img.onerror = () => {
+          console.error("Failed to load image:", img.src);
+
+          const skeleton = button.querySelector(".skeleton");
+          skeleton?.remove();
+        };
+
+        fragment.appendChild(button);
+      }
+
+      grid.appendChild(fragment);
+
+      pageLabel.textContent = `Page ${currentPage + 1} of ${totalPages}`;
+      prevButton.disabled = currentPage === 0;
+      nextButton.disabled = currentPage >= totalPages - 1;
+    }
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "Gallery image";
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+      lightboxImg.src = "";
+      lightboxImg.alt = "";
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    root.addEventListener("click", (event) => {
+      const prev = event.target.closest(".gallery-prev");
+      const next = event.target.closest(".gallery-next");
+      const item = event.target.closest(".gallery-item");
+
+      if (prev) {
+        const index = Number(prev.dataset.index);
+        pages[index] = Math.max(0, pages[index] - 1);
+        renderPage(index);
+        return;
+      }
+
+      if (next) {
+        const index = Number(next.dataset.index);
+        const totalPages = Math.ceil(galleries[index].count / PAGE_SIZE);
+        pages[index] = Math.min(totalPages - 1, pages[index] + 1);
+        renderPage(index);
+        return;
+      }
+
+      if (item) {
+        openLightbox(item.dataset.src, item.dataset.alt);
+      }
+    });
+
+    root.querySelectorAll(".gallery-tab").forEach((tab) => {
+      tab.addEventListener("change", () => {
+        if (tab.checked) renderPage(Number(tab.dataset.index));
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
+    });
+
+    renderPage(0);
+  })();
+</script>
